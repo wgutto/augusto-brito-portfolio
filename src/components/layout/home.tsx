@@ -4,54 +4,61 @@ import { GithubIcon } from "../icons/github-icon"
 import { InstagramIcon } from "../icons/instagram-icon"
 import TextType from "../ui/text-type"
 import ProfileCard from "../ProfileCard"
+import { XIcon } from "lucide-react"
 
 export const Home = () => {
     return (
-        <div className="grid grid-cols-2 items-center justify-between">
-            <div className="flex flex-col gap-4">
-                <div className="flex flex-col gap-1">
-                    <h1 className="font-semibold text-xl border-muted-foreground border-l-3 pl-2">Olá, me chamo Augusto Brito</h1>
+        <section className="min-h-screen snap-start grid grid-cols-2 items-center justify-center">
+            <div className="flex flex-col gap-3">
+                <div className="flex flex-col">
+                    <h1 className="font-semibold text-xl border-muted-foreground">Olá, me chamo <span className="text-blue-600 text-2xl font-bold">Augusto Brito</span></h1>
 
-                    <div className="text-4xl font-bold">
+                    <div className="text-4xl font-bold leading-tight">
                         <p>Sou desenvolvedor Full-Stack especializado em aplicações web</p>
                         <TextType
                             text={["modernas.", "rápidas.", "intuitivas.", "elegantes."]}
-                            typingSpeed={70}
-                            pauseDuration={2400}
-                            showCursor
+                            typingSpeed={120}
+                            pauseDuration={3000}
                             cursorCharacter="|"
-                            cursorBlinkDuration={0.2}
+                            cursorBlinkDuration={0.3}
                         />
                     </div>
                 </div>
 
-                <div className="flex flex-col gap-6 mt-5">
+                <div className="flex flex-col gap-4 mt-5">
                     <p className="font-semibold text-xl text-muted-foreground leading-9">Atuo do front ao back-end utilizando TypeScript, React, Next.js e Node.js, desenvolvendo soluções escaláveis com foco em arquitetura, performance e experiência do usuário. Tenho experiência com bancos SQL e NoSQL e deploy em ambientes modernos de cloud.</p>
 
-                    <div className="flex border-t-2 gap-4 pt-4">
-                        <GithubIcon className="w-6 text-muted-foreground cursor-pointer transition-all duration-300 hover:scale-105" />
-                        <InstagramIcon className="w-6 text-muted-foreground cursor-pointer transition-all duration-300 hover:scale-105" />
+                    <div className="flex border-t-2 gap-2 pt-3">
+                        <div className="p-2 rounded-full text-white bg-zinc-900 cursor-pointer transition-all duration-300 hover:scale-105">
+                            <GithubIcon className="w-5" />
+                        </div>
+
+                        <div className="p-2 rounded-full text-white bg-[#E1306C] cursor-pointer transition-all duration-300 hover:scale-105">
+                            <InstagramIcon className="w-5" />
+                        </div>
+
+                        <div className="p-2 rounded-full text-white bg-black dark:text-black dark:bg-white cursor-pointer transition-all duration-300 hover:scale-105">
+                            <XIcon className="w-5 h-5" />
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div className="w-full flex justify-end transition-all duration-400 hover:scale-101">
                 <ProfileCard
-                    name="Javi A. Torres"
-                    title="Software Engineer"
-                    handle="javicodes"
-                    status="Online"
+                    name=""
+                    title=""
+                    handle=""
+                    status=""
                     contactText="Contact Me"
                     avatarUrl="/photos/foto-home-2.jpeg"
                     showUserInfo={false}
                     enableTilt={true}
                     enableMobileTilt={false}
                     onContactClick={() => console.log('Contact clicked')}
-                    behindGlowColor="rgba(125, 190, 255, 0.67)"
                     behindGlowEnabled
-                    innerGradient="linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)"
                 />
             </div>
-        </div>
+        </section>
     )
 }

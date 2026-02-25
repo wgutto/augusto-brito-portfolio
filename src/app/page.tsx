@@ -5,7 +5,7 @@ export const Page = () => {
   return (
     <div>
       <Header/>
-      <main className="container mx-auto max-w-6xl min-h-full flex items-center mt-25">
+      <main className="container mx-auto max-w-6xl min-h-screen snap-x snap-mandatory">
         <Home/>
       </main>
     </div>

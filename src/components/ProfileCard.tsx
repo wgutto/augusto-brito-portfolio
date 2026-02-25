@@ -342,34 +342,6 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
 
   const cardStyle = useMemo(
     () => ({
-      '--icon': iconUrl ? `url(${iconUrl})` : 'none',
-      '--grain': grainUrl ? `url(${grainUrl})` : 'none',
-      '--inner-gradient': innerGradient ?? DEFAULT_INNER_GRADIENT,
-      '--behind-glow-color': behindGlowColor ?? 'rgba(125, 190, 255, 0.67)',
-      '--behind-glow-size': behindGlowSize ?? '50%',
-      '--pointer-x': '50%',
-      '--pointer-y': '50%',
-      '--pointer-from-center': '0',
-      '--pointer-from-top': '0.5',
-      '--pointer-from-left': '0.5',
-      '--card-opacity': '0',
-      '--rotate-x': '0deg',
-      '--rotate-y': '0deg',
-      '--background-x': '50%',
-      '--background-y': '50%',
-      '--card-radius': cardRadius,
-      '--sunpillar-1': 'hsl(2, 100%, 73%)',
-      '--sunpillar-2': 'hsl(53, 100%, 69%)',
-      '--sunpillar-3': 'hsl(93, 100%, 69%)',
-      '--sunpillar-4': 'hsl(176, 100%, 76%)',
-      '--sunpillar-5': 'hsl(228, 100%, 74%)',
-      '--sunpillar-6': 'hsl(283, 100%, 73%)',
-      '--sunpillar-clr-1': 'var(--sunpillar-1)',
-      '--sunpillar-clr-2': 'var(--sunpillar-2)',
-      '--sunpillar-clr-3': 'var(--sunpillar-3)',
-      '--sunpillar-clr-4': 'var(--sunpillar-4)',
-      '--sunpillar-clr-5': 'var(--sunpillar-5)',
-      '--sunpillar-clr-6': 'var(--sunpillar-6)'
     }),
     [iconUrl, grainUrl, innerGradient, behindGlowColor, behindGlowSize, cardRadius]
   );
@@ -381,7 +353,6 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
   // Complex styles that require CSS variables and can't be done with Tailwind
   const shineStyle = {
     maskImage: 'var(--icon)',
-    maskMode: 'luminance',
     maskRepeat: 'repeat',
     maskSize: '150%',
     maskPosition: 'top calc(200% - (var(--background-y) * 5)) left calc(100% - var(--background-x))',
@@ -398,49 +369,18 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
     backgroundImage: `
       repeating-linear-gradient(
         0deg,
-        var(--sunpillar-clr-1) 5%,
-        var(--sunpillar-clr-2) 10%,
-        var(--sunpillar-clr-3) 15%,
-        var(--sunpillar-clr-4) 20%,
-        var(--sunpillar-clr-5) 25%,
-        var(--sunpillar-clr-6) 30%,
-        var(--sunpillar-clr-1) 35%
-      ),
-      repeating-linear-gradient(
-        -45deg,
-        #0e152e 0%,
-        hsl(180, 10%, 60%) 3.8%,
-        hsl(180, 29%, 66%) 4.5%,
-        hsl(180, 10%, 60%) 5.2%,
-        #0e152e 10%,
-        #0e152e 12%
-      ),
-      radial-gradient(
-        farthest-corner circle at var(--pointer-x) var(--pointer-y),
-        hsla(0, 0%, 0%, 0.1) 12%,
-        hsla(0, 0%, 0%, 0.15) 20%,
-        hsla(0, 0%, 0%, 0.25) 120%
       )
     `.replace(/\s+/g, ' '),
     gridArea: '1 / -1',
-    borderRadius: cardRadius,
-    pointerEvents: 'none' as const
   };
 
   const glareStyle: React.CSSProperties = {
     transform: 'translate3d(0, 0, 1.1px)',
     overflow: 'hidden',
-    backgroundImage: `radial-gradient(
-      farthest-corner circle at var(--pointer-x) var(--pointer-y),
-      hsl(248, 25%, 80%) 12%,
-      hsla(207, 40%, 30%, 0.8) 90%
-    )`,
     mixBlendMode: 'overlay',
     filter: 'brightness(0.8) contrast(1.2)',
     zIndex: 4,
     gridArea: '1 / -1',
-    borderRadius: cardRadius,
-    pointerEvents: 'none'
   };
 
   return (
@@ -459,7 +399,7 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
           }}
         />
       )}
-      <div ref={shellRef} className="relative z-[1] group">
+      <div ref={shellRef} className="relative z-1 group">
         <section
           className="grid relative overflow-hidden"
           style={{
@@ -468,11 +408,8 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
             aspectRatio: '0.718',
             borderRadius: cardRadius,
             backgroundBlendMode: 'color-dodge, normal, normal, normal',
-            boxShadow:
-              'rgba(0, 0, 0, 0.8) calc((var(--pointer-from-left) * 10px) - 3px) calc((var(--pointer-from-top) * 20px) - 6px) 20px -5px',
             transition: 'transform 1s ease',
             transform: 'translateZ(0) rotateX(0deg) rotateY(0deg)',
-            background: 'rgba(0, 0, 0, 0.9)',
             backfaceVisibility: 'hidden'
           }}
           onMouseEnter={e => {
@@ -493,7 +430,6 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
             className="absolute inset-0"
             style={{
               backgroundImage: 'var(--inner-gradient)',
-              backgroundColor: 'rgba(0, 0, 0, 0.9)',
               borderRadius: cardRadius,
               display: 'grid',
               gridArea: '1 / -1'
