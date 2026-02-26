@@ -1,53 +1,61 @@
 "use client"
 
+import Image from "next/image"
 import { GithubIcon } from "../icons/github-icon"
 import { InstagramIcon } from "../icons/instagram-icon"
-import { GlareCard } from "../ui/glare-card"
 import TextType from "../ui/text-type"
 import { XIcon } from "lucide-react"
 
 export const Home = () => {
     return (
-        <section className="min-h-screen snap-start grid lg:grid-cols-2 items-center justify-center gap-8">
-            <div className="flex flex-col gap-3 order-2">
-                <div className="flex flex-col">
-                    <h1 className="font-semibold text-lg border-muted-foreground">Olá, me chamo <span className="text-blue-600 text-xl font-bold">Augusto Brito</span></h1>
-
-                    <div className="text-2xl text-justify font-bold leading-tight">
-                        <p>Sou desenvolvedor Full-Stack especializado em aplicações web</p>
+        <section className="min-h-screen snap-start flex flex-col justify-center gap-8 md:flex-row md:items-center">
+            <div className="min-h-full flex flex-col items-center gap-6 order-2 md:order-1">
+                <div className="flex flex-col text-center md:text-start">
+                    <h1 className="font-semibold text-lg md:text-lg xl:text-xl border-muted-foreground">Olá, eu sou
                         <TextType
-                            text={["modernas.", "rápidas.", "intuitivas.", "elegantes."]}
+                            text={[" Augusto Brito", " Software Engineer", " Full-Stack Developer"]}
                             typingSpeed={120}
                             pauseDuration={3000}
                             cursorCharacter="|"
                             cursorBlinkDuration={0.3}
+                            className="text-xl md:text-2xl xl:text-3xl font-bold text-blue-600"
                         />
+
+                    </h1>
+
+                    <div className="text-3xl text-center md:text-start md:text-4xl xl:text-5xl font-bold leading-tight">
+                        Focado na criação de sistemas performáticos, escaláveis e bem arquitetados.
                     </div>
                 </div>
 
-                <div className="flex flex-col gap-4 mt-5">
-                    <p className="font-semibold text-lg text-justify text-muted-foreground leading-9">Atuo do front ao back-end utilizando TypeScript, React, Next.js e Node.js, desenvolvendo soluções escaláveis com foco em arquitetura, performance e experiência do usuário. Tenho experiência com bancos SQL e NoSQL e deploy em ambientes modernos de cloud.</p>
+                <div className="flex flex-col gap-4">
+                    <p className="font-semibold text-md md:text-lg xl:text-xl text-justify text-muted-foreground leading-relaxed">Atuo do front ao back-end utilizando TypeScript, React, Next.js e Node.js, desenvolvendo soluções escaláveis com foco em arquitetura, performance e experiência do usuário. Tenho experiência com bancos SQL e NoSQL e deploy em ambientes modernos de cloud.</p>
 
-                    <div className="flex border-t-2 gap-2 pt-3">
-                        <div className="p-2 rounded-full text-white bg-zinc-900 cursor-pointer transition-all duration-300 hover:scale-105">
+                    <div className="flex border-t-2 gap-2 pt-4">
+                        <div className="p-2 rounded-full text-black border cursor-pointer transition-all duration-500 hover:scale-106 hover:bg-zinc-900 hover:text-white dark:text-white  hover:border-zinc-900">
                             <GithubIcon className="w-5" />
                         </div>
 
-                        <div className="p-2 rounded-full text-white bg-[#E1306C] cursor-pointer transition-all duration-300 hover:scale-105">
+                        <div className="p-2 rounded-full text-black border cursor-pointer transition-all duration-500 hover:scale-105 hover:bg-[#E1306C] hover:text-white dark:text-white hover:border-[#E1306C]">
                             <InstagramIcon className="w-5" />
                         </div>
 
-                        <div className="p-2 rounded-full text-white bg-black dark:text-black dark:bg-white cursor-pointer transition-all duration-300 hover:scale-105">
+                        <div className="p-2 rounded-full text-black border cursor-pointer transition-all duration-500 hover:scale-105 hover:bg-black hover:text-white dark:text-white dark:hover:text-black dark:hover:bg-white">
                             <XIcon className="w-5 h-5" />
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="w-full flex justify-center order-1 transition-all duration-400 hover:scale-101">
-                <GlareCard>
-                    <img src="/photos/foto-home-2.jpeg"/>
-                </GlareCard>
+            <div className="w-full flex items-center justify-center md:justify-end order-1 md:order-2">
+                <div className="relative w-40 md:w-60 lg:w-80 xl:w-90 aspect-square rounded-full overflow-hidden shadow-md shadow-blue-600">
+                    <Image
+                        src={"/photos/foto-home-2.jpeg"}
+                        alt="Foto Augusto Brito"
+                        fill
+                        className="object-cover transition-all  duration-1000 hover:scale-105"
+                    />
+                </div>
             </div>
         </section>
     )
