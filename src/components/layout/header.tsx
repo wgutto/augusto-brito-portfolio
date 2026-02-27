@@ -13,7 +13,9 @@ export const Header = () => {
                 <div className="flex bg-black/10 py-2 px-4 rounded-md dark:bg-zinc-900/70">
                     <Tabs className="border-r-2">
                         <TabsList variant="line">
-                            <TabsTrigger value="sobre" className="cursor-pointer">Sobre</TabsTrigger>
+                            <TabsTrigger value="sobre" className="cursor-pointer">
+                                <a href="#about">Sobre</a>
+                            </TabsTrigger>
                             <TabsTrigger value="habilidades" className="cursor-pointer">Habilidades</TabsTrigger>
                             <TabsTrigger value="projetos" className="cursor-pointer">Projetos</TabsTrigger>
                             <TabsTrigger value="contato" className="cursor-pointer">Contato</TabsTrigger>
