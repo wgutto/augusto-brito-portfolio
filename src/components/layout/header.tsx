@@ -14,7 +14,7 @@ export const Header = () => {
     ]
 
     return (
-        <header className="fixed w-full mt-2 z-50">
+        <header className="fixed w-full top-2 z-50">
             <Navbar>
                 <NavBody className="py-3">
                     <NavbarLogo />
