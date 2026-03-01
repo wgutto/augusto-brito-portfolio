@@ -9,10 +9,10 @@ import { BiLogoTypescript } from "react-icons/bi"
 
 export const About = () => {
     return (
-        <section id="about" className="relative min-h-screen flex items-center justify-center snap-start overflow-hidden dark:bg-linear-to-l dark:from-black dark:to-[#152331]">
-            <div className="flex flex-col justify-center gap-8 items-center w-full max-w-6xl mx-auto">
+        <section id="about" className="relative min-h-screen flex items-center justify-center snap-start px-4 overflow-hidden dark:bg-linear-to-b dark:from-black dark:to-[#020617]">
+            <div className="w-full max-w-6xl mx-auto flex flex-col justify-center items-center gap-8">
                 <h1 className="text-2xl md:text-3xl font-bold">Sobre</h1>
-                <div className="flex flex-col gap-4 p-4 rounded-md md:flex-row md:gap-6">
+                <div className="w-full flex flex-col justify-between gap-4 rounded-md md:flex-row md:gap-6">
                     <RevealLeft>
                         <div className="flex justify-center">
                             <GlareCard className="relative w-88 h-70 md:w-100 md:h-150">
