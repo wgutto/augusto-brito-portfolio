@@ -33,7 +33,7 @@ export const About = () => {
                             </div>
 
 
-                            <div>
+                            {/* <div>
                                 <div>
                                     <p>FrontEnd</p>
                                     <BiLogoTypescript className="size-15"/>
@@ -42,7 +42,7 @@ export const About = () => {
                                     <p>BackEnd</p>
                                     <BiLogoTypescript className="size-15"/>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </RevealRight>
                 </div>

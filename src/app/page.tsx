@@ -17,8 +17,6 @@ export const Page = () => {
         <Projects/>
         <Contact/>
       </main>
-
-      <BackgroundBeams className="min-h-screen"/>
     </div>
   )
 }
