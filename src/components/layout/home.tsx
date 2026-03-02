@@ -8,7 +8,7 @@ import RevealZoom from "../ui/reveal-zoom"
 
 export const Home = () => {
     return (
-        <section id="home" className="relative min-h-screen flex items-center justify-center snap-start px-4 overflow-hidden">
+        <section id="home" className="relative min-h-screen flex items-center justify-center snap-start px-4 overflow-hidden dark:bg-linear-to-t dark:from-black dark:to-[#020617]">
             <RevealZoom>
                 <div className="flex flex-col justify-center gap-4 md:flex-row md:items-center w-full max-w-6xl mx-auto">
                     <div className="flex flex-col items-center gap-2 order-2 md:order-1">
@@ -66,7 +66,7 @@ export const Home = () => {
                         </div>
                     </div>
                     <div className="w-full flex items-center justify-center md:justify-end order-1 md:order-2">
-                        <div className="relative w-40 md:w-60 lg:w-80 xl:w-90 aspect-square rounded-full overflow-hidden shadow-md shadow-blue-600">
+                        <div className="relative w-40 md:w-60 lg:w-70 xl:w-80 aspect-square rounded-full overflow-hidden shadow-md shadow-blue-600">
                             <Image
                                 src={"/photos/foto-home-2.jpeg"}
                                 alt="Foto Augusto Brito"
@@ -77,8 +77,7 @@ export const Home = () => {
                     </div>
                 </div>
             </RevealZoom>
-
-            <BackgroundBeams className="absolute inset-0 -z-10 pointer-events-none"/>
+            {/* <BackgroundBeams className="hidden absolute inset-0 -z-10 pointer-events-none lg:block"/> */}
         </section>
     )
 }

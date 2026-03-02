@@ -7,12 +7,12 @@ import { Skills } from "@/components/layout/skills"
 
 export const Page = () => {
   return (
-    <div className="w-full min-h-screen">
+    <div>
       <Header/>
-      <main className="w-full snap-y snap-mandatory">
+      <main className="w-full min-h-screen snap-y snap-mandatory">
         <Home/>
         <About/>
-        <Skills/>
+        {/* <Skills/> */}
         <Projects/>
         <Contact/>
       </main>

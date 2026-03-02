@@ -20,12 +20,12 @@ import { PostGreSqlSVG } from "../icons/postgresql"
 
 export const About = () => {
     return (
-        <section id="about" className="relative w-full min-h-screen flex items-center justify-center snap-start px-4 overflow-hidden dark:bg-linear-to-b dark:from-black dark:to-[#020617]">
+        <section id="about" className="relative w-full min-h-screen flex items-center justify-center snap-start px-4 py-20 overflow-hidden md:py-0 dark:bg-linear-to-b dark:from-black dark:to-[#020617]">
             <div className="w-full max-w-6xl mx-auto flex flex-col justify-center items-center gap-6">
                 <h1 className="text-2xl md:text-3xl font-bold">Sobre</h1>
-                <div className="flex w-full flex-col gap-4 rounded-md md:flex-row md:gap-6">
+                <div className="flex w-full flex-col rounded-md md:flex-row lg:gap-6 lg:items-center">
                     <RevealLeft>
-                        <div className="hidden md:block">
+                        <div className="hidden lg:block">
                             <GlareCard className="relative w-88 h-70 md:w-100 md:h-150">
                                 <Image
                                     src={"/photos/foto-home.jpeg"}
@@ -68,25 +68,13 @@ export const About = () => {
                             </div>
 
                             <div className="border-l-2 pl-2">
-                                <h3 className="font-semibold pb-2">Databases</h3>
+                                <h3 className="font-semibold pb-2">Banco de dados</h3>
                                 <div className="flex items-center gap-2">
                                     <MySqlIconSVG className="size-12 text-black dark:text-white"/>
                                     <MongoDbIconSVG className="size-12"/>
                                     <PostGreSqlSVG className="size-12"/>
                                 </div>
                             </div>
-
-
-                            {/* <div>
-                                <div>
-                                    <p>FrontEnd</p>
-                                    <BiLogoTypescript className="size-15"/>
-                                </div>
-                                <div>
-                                    <p>BackEnd</p>
-                                    <BiLogoTypescript className="size-15"/>
-                                </div>
-                            </div> */}
                         </div>
                     </RevealRight>
                 </div>
