@@ -21,7 +21,7 @@ import { PostGreSqlSVG } from "../icons/postgresql"
 export const About = () => {
     return (
         <section id="about" className="relative w-full min-h-screen flex items-center justify-center snap-start px-4 overflow-hidden dark:bg-linear-to-b dark:from-black dark:to-[#020617]">
-            <div className="w-full max-w-6xl mx-auto flex flex-col justify-center items-center gap-6 bg-white">
+            <div className="w-full max-w-6xl mx-auto flex flex-col justify-center items-center gap-6">
                 <h1 className="text-2xl md:text-3xl font-bold">Sobre</h1>
                 <div className="flex w-full flex-col gap-4 rounded-md md:flex-row md:gap-6">
                     <RevealLeft>
