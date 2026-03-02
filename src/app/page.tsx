@@ -4,7 +4,6 @@ import { Header } from "@/components/layout/header"
 import { Home } from "@/components/layout/home"
 import { Projects } from "@/components/layout/projects"
 import { Skills } from "@/components/layout/skills"
-import { BackgroundBeams } from "@/components/ui/background-beams"
 
 export const Page = () => {
   return (
