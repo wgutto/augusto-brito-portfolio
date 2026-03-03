@@ -19,7 +19,7 @@ type Props = {
 
 export const ProjectItem = ({ image, title, description, linkDemo, textLinkDemo, icons }: Props) => {
     return (
-        <div className="border p-4 rounded-md">
+        <div className="border p-4 rounded-md transition-all duration-500 hover:scale-101 shadow-lg">
             <Image
                 src={image}
                 alt={title}

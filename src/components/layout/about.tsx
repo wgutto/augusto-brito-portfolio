@@ -25,7 +25,7 @@ export const About = () => {
 
                 <div className="w-full max-w-6xl flex flex-col justify-center mt-6 lg:gap-6 lg:flex-row">
                     <RevealLeft>
-                        <div className="hidden lg:block">
+                        <div className="hidden lg:block shadow-2xl rounded-[48px]">
                             <GlareCard className="relative w-88 h-70 md:w-100 md:h-150">
                                 <Image
                                     src={"/photos/foto-home.jpeg"}
