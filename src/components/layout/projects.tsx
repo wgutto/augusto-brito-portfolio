@@ -17,7 +17,7 @@ export const Projects = () => {
                 <ProjectItem
                     image="/mockups/mockup-brito-pizzaria.png"
                     title="Brito Pizzaria"
-                    description="Plataforma de pedidos online para pizzaria com carrinho, escolha de tamanhos e integração direta com WhatsApp para envio automático do pedido ao lojista."
+                    description="Sistema web de gerenciamento de pedidos para pizzaria com autenticação de usuários, permitindo acompanhar pedidos em tempo real e organizar o fluxo de produção da cozinha."
                     linkDemo="https://github.com/wgutto/brito-pizzaria"
                     textLinkDemo="Projeto em desenvolvimento"
                     icons={[
