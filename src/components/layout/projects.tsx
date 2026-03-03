@@ -3,6 +3,10 @@ import { TypeScriptIconSVG } from "../icons/typescript-icon"
 import { NextJsIconSVG } from "../icons/nextjs-icon"
 import { TailwindIconSVG } from "../icons/tailwind-icon"
 import { ProjectItem } from "./project-item"
+import { NodeJsIconSVG } from "../icons/nodejs-icon"
+import { ExpressIconSVG } from "../icons/express-icon"
+import { PrimaIconSVG } from "../icons/prisma"
+import { PostGreSqlSVG } from "../icons/postgresql"
 
 export const Projects = () => {
     return (
@@ -11,10 +15,29 @@ export const Projects = () => {
 
             <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
                 <ProjectItem
+                    image="/mockups/mockup-brito-pizzaria.png"
+                    title="Brito Pizzaria"
+                    description="Plataforma de pedidos online para pizzaria com carrinho, escolha de tamanhos e integração direta com WhatsApp para envio automático do pedido ao lojista."
+                    linkDemo="https://github.com/wgutto/brito-pizzaria"
+                    textLinkDemo="Projeto em desenvolvimento"
+                    icons={[
+                        {icon: TypeScriptIconSVG, name: "TypeScript"},
+                        {icon: NextJsIconSVG, name: "NextJs"},
+                        {icon: ReactIconSVG, name: "React"},
+                        {icon: TailwindIconSVG, name: "TailwindCSS"},
+                        {icon: NodeJsIconSVG, name: "NodeJs"},
+                        {icon: ExpressIconSVG, name: "Express"},
+                        {icon: PrimaIconSVG, name: "Prisma"},
+                        {icon: PostGreSqlSVG, name: "PostgreSQL"}
+                    ]}
+                />
+
+                <ProjectItem
                     image="/mockups/mockup-netus-pizzaria.png"
                     title="Net'us Pizzaria"
                     description="Plataforma de pedidos online para pizzaria com carrinho, escolha de tamanhos e integração direta com WhatsApp para envio automático do pedido ao lojista."
                     linkDemo="https://project-netus-pizzaria.vercel.app/"
+                    textLinkDemo="Projeto online"
                     icons={[
                         {icon: TypeScriptIconSVG, name: "TypeScript"},
                         {icon: NextJsIconSVG, name: "NextJs"},
@@ -22,11 +45,13 @@ export const Projects = () => {
                         {icon: TailwindIconSVG, name: "TailwindCSS"}
                     ]}
                 />
+
                 <ProjectItem
                     image="/mockups/mockup-calculadora-imc.png"
                     title="Calculadora de IMC"
                     description="Aplicação web responsiva para cálculo do Índice de Massa Corporal (IMC), com validação de formulários em tempo real, interface intuitiva e suporte a tema claro e escuro."
                     linkDemo="https://projeto-calculadora-de-imc-pearl.vercel.app/"
+                    textLinkDemo="Projeto online"
                     icons={[
                         {icon: TypeScriptIconSVG, name: "TypeScript"},
                         {icon: NextJsIconSVG, name: "NextJs"},
