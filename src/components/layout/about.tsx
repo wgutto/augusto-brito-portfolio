@@ -23,7 +23,7 @@ export const About = () => {
         <section id="about" className="relative w-full min-h-screen flex flex-col items-center justify-center snap-start px-4 py-20 overflow-hidden md:py-0 dark:bg-linear-to-b dark:from-black dark:to-[#020617]">
             <h1 className="text-2xl md:text-3xl font-bold">Sobre</h1>
 
-                <div className="w-full max-w-6xl flex flex-col justify-center mt-6 lg:gap-6 lg:flex-row">
+                <div className="w-full max-w-6xl flex flex-col items-center justify-center mt-6 lg:gap-6 lg:flex-row">
                     <RevealLeft>
                         <div className="hidden lg:block shadow-2xl rounded-[48px]">
                             <GlareCard className="relative w-88 h-70 md:w-100 md:h-150">
