@@ -208,11 +208,13 @@ export const MobileNavMenu = ({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className={cn(
-            "absolute inset-x-0 top-10 z-50 flex w-full mx-auto flex-col items-end justify-start gap-4 rounded-lg bg-white p-4 shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] dark:bg-neutral-950",
+            "absolute top-10 right-4 z-50 w-40 flex flex-col items-center gap-4 rounded-lg bg-white pt-4 shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] dark:bg-neutral-950",
             className,
           )}
         >
           {children}
+
+          <div className="w-full flex items-center justify-end border-t-2 p-2"><ButtonToggleTheme/></div>
         </motion.div>
       )}
     </AnimatePresence>

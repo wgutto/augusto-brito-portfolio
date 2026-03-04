@@ -53,7 +53,7 @@ export const FormContact = () => {
             <CardHeader>
                 <CardTitle>Envie uma mensagem</CardTitle>
                 <CardDescription>
-                    Me envie uma mensagem no email para conversamos melhor.
+                    Me envie uma mensagem no email para conversarmos melhor.
                 </CardDescription>
             </CardHeader>
             <CardContent>

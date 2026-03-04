@@ -2,7 +2,6 @@
 
 import Image from "next/image"
 import TextType from "../ui/text-type"
-import { BackgroundBeams } from "../ui/background-beams"
 import Link from "next/link"
 import RevealZoom from "../ui/reveal-zoom"
 

@@ -1,0 +1,7 @@
+export const Footer = () => {
+    return (
+        <footer className="text-center text-sm text-muted-foreground border-t-2 bg-transparent py-6 dark:bg-linear-to-t dark:from-black dark:to-[#020617]">
+            © {new Date().getFullYear()} Augusto Brito. Todos os direitos reservados.
+        </footer>
+    )
+}

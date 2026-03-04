@@ -1,9 +1,9 @@
 import { About } from "@/components/layout/about"
 import { Contact } from "@/components/layout/contact"
+import { Footer } from "@/components/layout/footer"
 import { Header } from "@/components/layout/header"
 import { Home } from "@/components/layout/home"
 import { Projects } from "@/components/layout/projects"
-import { Skills } from "@/components/layout/skills"
 
 export const Page = () => {
   return (
@@ -16,6 +16,7 @@ export const Page = () => {
         <Projects/>
         <Contact/>
       </main>
+      <Footer/>
     </div>
   )
 }
