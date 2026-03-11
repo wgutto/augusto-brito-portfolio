@@ -47,7 +47,7 @@ function Button({
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean
   }) {
-  const Comp = asChild ? "div" : "button"
+  const Comp = asChild ? ("div" as unknown as "button") : "button"
 
   return (
     <Comp

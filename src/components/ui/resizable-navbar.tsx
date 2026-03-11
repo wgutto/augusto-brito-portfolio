@@ -25,7 +25,7 @@ interface NavBodyProps {
 }
 
 interface NavItemsProps {
-  items: {
+  items: readonly {
     name: string;
     link: string;
   }[];

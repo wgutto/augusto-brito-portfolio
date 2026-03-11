@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://augustobrito.dev"),
   title: "Augusto Brito | Full-Stack Developer",
   description:
     "Portfólio de Augusto Brito, desenvolvedor full-stack especializado em React, Next.js, TypeScript e Node.js. Desenvolvendo soluções escaláveis com foco em performance e UX.",
