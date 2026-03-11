@@ -93,13 +93,6 @@ npm run dev
 
 Abra [http://localhost:3000](http://localhost:3000) no navegador.
 
-### Build para Produção
-
-```bash
-npm run build
-npm run start
-```
-
 ## 🎨 Features
 
 - ✅ **Responsivo** - Mobile, tablet e desktop
@@ -109,37 +102,6 @@ npm run start
 - ✅ **Formulário Validado** - Validação com Zod
 - ✅ **Performance** - Otimizado com Next.js 16
 - ✅ **TypeScript** - Tipagem estática completa
-
-## 📱 Seções
-
-### Hero (Home)
-- Apresentação pessoal com typing effect
-- Links para redes sociais
-- CTA com botão para contato
-
-### Sobre
-- Descrição pessoal e profissional
-- Foto em glare card
-- Skills em 3 categorias (Frontend, Backend, Databases)
-
-### Projetos
-- Grid de 3 projetos principais
-- Imagens com mockups
-- Tecnologias utilizadas
-- Links para repositórios/demos
-
-### Contato
-- Formulário de contato validado
-- Informações de contato (Email, WhatsApp, Instagram, LinkedIn)
-- Integração com redes sociais
-
-## 🔧 Configuração
-
-Edite `src/config/constants.ts` para:
-- Adicionar/alterar links de redes sociais
-- Modificar items de navegação
-- Adicionar novos projetos
-- Atualizar informações pessoais
 
 ## 📧 Contato
 
@@ -154,4 +116,4 @@ Este projeto é de uso pessoal e está disponível como portfólio. Sinta-se liv
 
 ---
 
-Desenvolvido com ❤️ por **Augusto Brito** | 2025
+Desenvolvido com ❤️ por **Augusto Brito** | 2026
