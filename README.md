@@ -93,13 +93,6 @@ npm run dev
 
 Abra [http://localhost:3000](http://localhost:3000) no navegador.
 
-### Build para Produção
-
-```bash
-npm run build
-npm run start
-```
-
 ## 🎨 Features
 
 - ✅ **Responsivo** - Mobile, tablet e desktop
@@ -123,4 +116,4 @@ Este projeto é de uso pessoal e está disponível como portfólio. Sinta-se liv
 
 ---
 
-Desenvolvido com ❤️ por **Augusto Brito** | 2025
+Desenvolvido com ❤️ por **Augusto Brito** | 2026
