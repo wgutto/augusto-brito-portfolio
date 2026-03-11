@@ -5,12 +5,13 @@ import Link from "next/link"
 import { FormContact } from "./form-contact"
 import { RevealLeft } from "../ui/reveal-left"
 import { RevealRight } from "../ui/reveal-right"
+import { SOCIAL_LINKS } from "@/config/constants"
 
 export const Contact = () => {
     return (
         <section id="contact" className="relative min-h-screen flex flex-col items-center justify-center snap-start px-4 pt-20 pb-15 overflow-hidden dark:bg-linear-to-b dark:from-black dark:to-[#020617]">
             <h1 className="text-2xl md:text-3xl font-bold">Contato</h1>
-            
+
             <div className="w-full max-w-6xl mx-auto flex flex-col justify-center items-center gap-6 mt-6 md:flex-row">
                 <div className="w-full">
                     <RevealLeft>
@@ -19,23 +20,23 @@ export const Contact = () => {
                                 icon={<MdOutlineEmail className="size-6" />}
                                 title="Email"
                                 message="Envie-me uma mensagem diretamente"
-                                info="augusstobrito@gmail.com"
+                                info={SOCIAL_LINKS.email}
                             />
-                            <Link href={"https://wa.me/5588996087187?text=Olá%20Augusto,%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade."} target="_blank">
+                            <Link href={SOCIAL_LINKS.whatsapp} target="_blank" rel="noopener noreferrer">
                                 <InfosContactItem
                                     icon={<FaWhatsapp className="size-6" />}
                                     title="WhatsApp"
                                     message="Entre em contato comigo"
                                 />
                             </Link>
-                            <Link href={"https://www.instagram.com/wgutto"} target="_blank">
+                            <Link href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer">
                                 <InfosContactItem
                                     icon={<FaInstagram className="size-6" />}
                                     title="Instagram"
                                     message="Acesse meu Instagram"
                                 />
                             </Link>
-                            <Link href={"https://www.linkedin.com/in/wgutto"} target="_blank">
+                            <Link href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer">
                                 <InfosContactItem
                                     icon={<FaLinkedin className="size-6" />}
                                     title="LinkedIn"

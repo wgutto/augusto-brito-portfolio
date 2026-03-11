@@ -2,25 +2,17 @@
 
 import { MobileNav, MobileNavHeader, MobileNavMenu, MobileNavToggle, Navbar, NavbarLogo, NavBody, NavItems } from "../ui/resizable-navbar"
 import { useState } from "react"
+import { NAV_ITEMS } from "@/config/constants"
 
 export const Header = () => {
     const [isOpen, setIsOpen] = useState(false)
-
-    const navItems = [
-        { name: "Sobre", link: "#about" },
-        { name: "Habilidades", link: "#skills" },
-        { name: "Projetos", link: "#projects" },
-        { name: "Contato", link: "#contact" }
-    ]
 
     return (
         <header className="fixed w-full top-2 z-50">
             <Navbar>
                 <NavBody>
-                    <NavbarLogo/>
-                    <NavItems
-                        items={navItems}
-                    />
+                    <NavbarLogo />
+                    <NavItems items={NAV_ITEMS} />
                 </NavBody>
 
                 <MobileNav>
@@ -36,7 +28,7 @@ export const Header = () => {
                         isOpen={isOpen}
                         onClose={() => setIsOpen(false)}
                     >
-                        {navItems.map((item, index) =>
+                        {NAV_ITEMS.map((item, index) =>
                             <a
                                 href={item.link}
                                 key={index}

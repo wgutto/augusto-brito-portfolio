@@ -8,15 +8,14 @@ import { Projects } from "@/components/layout/projects"
 export const Page = () => {
   return (
     <div>
-      <Header/>
+      <Header />
       <main className="w-full min-h-screen snap-y snap-mandatory">
-        <Home/>
-        <About/>
-        {/* <Skills/> */}
-        <Projects/>
-        <Contact/>
+        <Home />
+        <About />
+        <Projects />
+        <Contact />
       </main>
-      <Footer/>
+      <Footer />
     </div>
   )
 }

@@ -2,7 +2,6 @@
 
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Controller, useForm } from "react-hook-form"
-import z from "zod"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -27,25 +26,22 @@ import {
     InputGroupText,
     InputGroupTextarea,
 } from "@/components/ui/input-group"
-
-const formSchema = z.object({
-    name: z.string().min(2, { error: "Nome muito curto" }).max(60, { error: "Nome muito longo" }),
-    email: z.email("Email inválido").max(254, { error: "Email muito longo" }),
-    message: z.string("Preencha o campo").min(10, { error: "Mensagem muito curta" }).max(500, { error: "Mensagem muito longa" })
-})
+import { contactFormSchema, type ContactFormData } from "@/lib/validations"
 
 export const FormContact = () => {
-    const form = useForm<z.infer<typeof formSchema>>({
-        resolver: zodResolver(formSchema),
+    const form = useForm<ContactFormData>({
+        resolver: zodResolver(contactFormSchema),
         defaultValues: {
             name: "",
             email: "",
+            subject: "",
             message: ""
         },
     })
 
-    function onSubmit(data: z.infer<typeof formSchema>) {
-
+    function onSubmit(data: ContactFormData) {
+        console.log("Form submitted:", data)
+        // TODO: Implementar envio do email
     }
 
     return (
@@ -53,23 +49,23 @@ export const FormContact = () => {
             <CardHeader>
                 <CardTitle>Envie uma mensagem</CardTitle>
                 <CardDescription>
-                    Me envie uma mensagem no email para conversarmos melhor.
+                    Me envie uma mensagem para conversarmos melhor.
                 </CardDescription>
             </CardHeader>
             <CardContent>
-                <form id="form-rhf-demo" onSubmit={form.handleSubmit(onSubmit)}>
+                <form id="form-contact" onSubmit={form.handleSubmit(onSubmit)}>
                     <FieldGroup>
                         <Controller
                             name="name"
                             control={form.control}
                             render={({ field, fieldState }) => (
                                 <Field data-invalid={fieldState.invalid}>
-                                    <FieldLabel htmlFor="form-rhf-demo-title">
+                                    <FieldLabel htmlFor="contact-name">
                                         Nome
                                     </FieldLabel>
                                     <Input
                                         {...field}
-                                        id="form-rhf-demo-title"
+                                        id="contact-name"
                                         aria-invalid={fieldState.invalid}
                                         placeholder="Digite seu nome"
                                         autoComplete="off"
@@ -86,14 +82,37 @@ export const FormContact = () => {
                             control={form.control}
                             render={({ field, fieldState }) => (
                                 <Field data-invalid={fieldState.invalid}>
-                                    <FieldLabel htmlFor="form-rhf-demo-title">
+                                    <FieldLabel htmlFor="contact-email">
                                         Email
                                     </FieldLabel>
                                     <Input
                                         {...field}
-                                        id="form-rhf-demo-title"
+                                        id="contact-email"
+                                        type="email"
                                         aria-invalid={fieldState.invalid}
-                                        placeholder="Digite seu email"
+                                        placeholder="seu.email@example.com"
+                                        autoComplete="off"
+                                    />
+                                    {fieldState.invalid && (
+                                        <FieldError errors={[fieldState.error]} />
+                                    )}
+                                </Field>
+                            )}
+                        />
+
+                        <Controller
+                            name="subject"
+                            control={form.control}
+                            render={({ field, fieldState }) => (
+                                <Field data-invalid={fieldState.invalid}>
+                                    <FieldLabel htmlFor="contact-subject">
+                                        Assunto
+                                    </FieldLabel>
+                                    <Input
+                                        {...field}
+                                        id="contact-subject"
+                                        aria-invalid={fieldState.invalid}
+                                        placeholder="Qual é o assunto?"
                                         autoComplete="off"
                                     />
                                     {fieldState.invalid && (
@@ -108,21 +127,22 @@ export const FormContact = () => {
                             control={form.control}
                             render={({ field, fieldState }) => (
                                 <Field data-invalid={fieldState.invalid}>
-                                    <FieldLabel htmlFor="form-rhf-demo-description">
+                                    <FieldLabel htmlFor="contact-message">
                                         Mensagem
                                     </FieldLabel>
                                     <InputGroup>
                                         <InputGroupTextarea
                                             {...field}
-                                            id="form-rhf-demo-description"
+                                            id="contact-message"
                                             placeholder="Digite uma mensagem"
                                             rows={6}
                                             className="min-h-24"
                                             aria-invalid={fieldState.invalid}
+                                            maxLength={1000}
                                         />
                                         <InputGroupAddon align="block-end">
                                             <InputGroupText className="tabular-nums">
-                                                {field.value.length}/500 caracteres
+                                                {field.value.length}/1000 caracteres
                                             </InputGroupText>
                                         </InputGroupAddon>
                                     </InputGroup>
@@ -136,9 +156,14 @@ export const FormContact = () => {
                 </form>
             </CardContent>
             <CardFooter className="w-full flex justify-end">
-                    <Button type="submit" form="form-rhf-demo" className="cursor-pointer bg-blue-600 text-white hover:scale-105 hover:bg-blue-600">
-                        Enviar
-                    </Button>
+                <Button
+                    type="submit"
+                    form="form-contact"
+                    className="cursor-pointer bg-blue-600 text-white hover:scale-105 hover:bg-blue-600"
+                    disabled={form.formState.isSubmitting}
+                >
+                    {form.formState.isSubmitting ? "Enviando..." : "Enviar"}
+                </Button>
             </CardFooter>
         </Card>
     )

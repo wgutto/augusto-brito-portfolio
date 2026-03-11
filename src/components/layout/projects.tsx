@@ -9,6 +9,18 @@ import { PrimaIconSVG } from "../icons/prisma"
 import { PostGreSqlSVG } from "../icons/postgresql"
 import { RevealRight } from "../ui/reveal-right"
 import { RevealLeft } from "../ui/reveal-left"
+import { PROJECTS } from "@/config/constants"
+
+const technologyIcons: Record<string, React.ElementType> = {
+  "TypeScript": TypeScriptIconSVG,
+  "NextJs": NextJsIconSVG,
+  "React": ReactIconSVG,
+  "TailwindCSS": TailwindIconSVG,
+  "NodeJs": NodeJsIconSVG,
+  "Express": ExpressIconSVG,
+  "Prisma": PrimaIconSVG,
+  "PostgreSQL": PostGreSqlSVG
+}
 
 export const Projects = () => {
     return (
@@ -16,57 +28,26 @@ export const Projects = () => {
             <h1 className="text-2xl md:text-3xl font-bold">Projetos</h1>
 
             <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-                <RevealLeft>
-                    <ProjectItem
-                        image="/mockups/mockup-brito-pizzaria.png"
-                        title="Brito Pizzaria"
-                        description="Sistema web de gerenciamento de pedidos para pizzaria com autenticação de usuários, permitindo acompanhar pedidos em tempo real e organizar o fluxo de produção da cozinha."
-                        linkDemo="https://github.com/wgutto/brito-pizzaria"
-                        textLinkDemo="Projeto em desenvolvimento"
-                        icons={[
-                            { icon: TypeScriptIconSVG, name: "TypeScript" },
-                            { icon: NextJsIconSVG, name: "NextJs" },
-                            { icon: ReactIconSVG, name: "React" },
-                            { icon: TailwindIconSVG, name: "TailwindCSS" },
-                            { icon: NodeJsIconSVG, name: "NodeJs" },
-                            { icon: ExpressIconSVG, name: "Express" },
-                            { icon: PrimaIconSVG, name: "Prisma" },
-                            { icon: PostGreSqlSVG, name: "PostgreSQL" }
-                        ]}
-                    />
-                </RevealLeft>
+                {PROJECTS.map((project, index) => {
+                    const isLeft = index % 2 === 0
+                    const Wrapper = isLeft ? RevealLeft : RevealRight
 
-                <RevealRight>
-                    <ProjectItem
-                        image="/mockups/mockup-netus-pizzaria.png"
-                        title="Net'us Pizzaria"
-                        description="Plataforma de pedidos online para pizzaria com carrinho, escolha de tamanhos e integração direta com WhatsApp para envio automático do pedido ao lojista."
-                        linkDemo="https://project-netus-pizzaria.vercel.app/"
-                        textLinkDemo="Projeto online"
-                        icons={[
-                            { icon: TypeScriptIconSVG, name: "TypeScript" },
-                            { icon: NextJsIconSVG, name: "NextJs" },
-                            { icon: ReactIconSVG, name: "React" },
-                            { icon: TailwindIconSVG, name: "TailwindCSS" }
-                        ]}
-                    />
-                </RevealRight>
-
-                <RevealLeft>
-                    <ProjectItem
-                        image="/mockups/mockup-calculadora-imc.png"
-                        title="Calculadora de IMC"
-                        description="Aplicação web responsiva para cálculo do Índice de Massa Corporal (IMC), com validação de formulários em tempo real, interface intuitiva e suporte a tema claro e escuro."
-                        linkDemo="https://projeto-calculadora-de-imc-pearl.vercel.app/"
-                        textLinkDemo="Projeto online"
-                        icons={[
-                            { icon: TypeScriptIconSVG, name: "TypeScript" },
-                            { icon: NextJsIconSVG, name: "NextJs" },
-                            { icon: ReactIconSVG, name: "React" },
-                            { icon: TailwindIconSVG, name: "TailwindCSS" }
-                        ]}
-                    />
-                </RevealLeft>
+                    return (
+                        <Wrapper key={project.id}>
+                            <ProjectItem
+                                image={project.image}
+                                title={project.title}
+                                description={project.description}
+                                linkDemo={project.link}
+                                textLinkDemo={project.linkText}
+                                icons={project.technologies.map(tech => ({
+                                    icon: technologyIcons[tech],
+                                    name: tech
+                                }))}
+                            />
+                        </Wrapper>
+                    )
+                })}
             </div>
         </section>
     )

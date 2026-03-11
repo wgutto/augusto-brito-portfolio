@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ElementType } from "react"
 import { FaExternalLinkAlt } from "react-icons/fa"
+import { SOCIAL_LINKS } from "@/config/constants"
 
 type IconType = {
     icon: ElementType
@@ -50,12 +51,12 @@ export const ProjectItem = ({ image, title, description, linkDemo, textLinkDemo,
                 </div>
 
                 <div className="flex items-center justify-between mt-2 border-t-2 pt-4">
-                    <Link href={linkDemo} target="_blank" className="flex items-center gap-1 bg-blue-600 py-1 px-2 rounded-md cursor-pointer transition-all duration-300 hover:scale-102">
+                    <Link href={linkDemo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 bg-blue-600 py-1 px-2 rounded-md cursor-pointer transition-all duration-300 hover:scale-102">
                         <FaExternalLinkAlt className="size-3.5 text-white" />
                         <span className="font-bold text-sm text-white">{textLinkDemo}</span>
                     </Link>
 
-                    <Link href={"https://github.com/wgutto"} target="_blank">
+                    <Link href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                         <Image
                             src={"https://img.shields.io/badge/GitHub-%23181717.svg?logo=github&logoColor=white"}
                             alt="Logo GitHub"

@@ -4,6 +4,7 @@ import Image from "next/image"
 import TextType from "../ui/text-type"
 import Link from "next/link"
 import RevealZoom from "../ui/reveal-zoom"
+import { SOCIAL_LINKS } from "@/config/constants"
 
 export const Home = () => {
     return (
@@ -29,7 +30,7 @@ export const Home = () => {
                         <div className="flex flex-col gap-4">
                             <p className="font-semibold text-lg md:text-xl text-justify text-muted-foreground leading-relaxed">Atuo do front ao back-end utilizando TypeScript, React, Next.js e Node.js, desenvolvendo soluções escaláveis com foco em arquitetura, performance e experiência do usuário. Tenho experiência com bancos SQL e NoSQL e deploy em ambientes modernos de cloud.</p>
                             <div className="flex justify-end border-t-2 gap-2 pt-4">
-                                <Link href={"https://github.com/wgutto"} target="_blank">
+                                <Link href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                                     <Image
                                         src={"https://img.shields.io/badge/GitHub-%23181717.svg?logo=github&logoColor=white"}
                                         alt="Logo GitHub"
@@ -37,7 +38,7 @@ export const Home = () => {
                                         height={68}
                                     />
                                 </Link>
-                                <Link href={"https://www.linkedin.com/in/wgutto/"} target="_blank">
+                                <Link href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                                     <Image
                                         src={"https://img.shields.io/badge/LinkedIn-%230A66C2.svg?logo=linkedin&logoColor=white"}
                                         alt="Logo LinkedIn"
@@ -45,7 +46,7 @@ export const Home = () => {
                                         height={60}
                                     />
                                 </Link>
-                                <Link href={"https://www.instagram.com/wgutto"} target="_blank">
+                                <Link href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                                     <Image
                                         src={"https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white"}
                                         alt="Logo Instagram"
@@ -53,7 +54,7 @@ export const Home = () => {
                                         height={90}
                                     />
                                 </Link>
-                                <Link href={"https://x.com/wguttoo"} target="_blank">
+                                <Link href={SOCIAL_LINKS.twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter/X">
                                     <Image
                                         src={"https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white"}
                                         alt="Logo X"
@@ -76,7 +77,6 @@ export const Home = () => {
                     </div>
                 </div>
             </RevealZoom>
-            {/* <BackgroundBeams className="hidden absolute inset-0 -z-10 pointer-events-none lg:block"/> */}
         </section>
     )
 }
