@@ -13,6 +13,7 @@ export const NAV_ITEMS = [
   { name: "Sobre", link: "#about" },
   { name: "Habilidades", link: "#skills" },
   { name: "Projetos", link: "#projects" },
+  { name: "Certificações", link: "#certifications" },
   { name: "Contato", link: "#contact" }
 ] as const;
 
