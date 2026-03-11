@@ -1,13 +1,13 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { IconMenu2, IconX } from "@tabler/icons-react";
+import { Menu, X } from "lucide-react";
 import {
   motion,
   AnimatePresence,
   useScroll,
   useMotionValueEvent,
-} from "motion/react";
+} from "framer-motion";
 
 import { Children, cloneElement, ComponentPropsWithoutRef, ElementType, isValidElement, ReactElement, ReactNode, useRef, useState } from "react";
 import { ButtonToggleTheme } from "../layout/button-toggle-theme";
@@ -229,9 +229,9 @@ export const MobileNavToggle = ({
   onClick: () => void;
 }) => {
   return isOpen ? (
-    <IconX className="size-7 text-black dark:text-white" onClick={onClick} />
+    <X className="size-7 text-black dark:text-white" onClick={onClick} />
   ) : (
-    <IconMenu2 className="size-7 text-black dark:text-white" onClick={onClick} />
+    <Menu className="size-7 text-black dark:text-white" onClick={onClick} />
   );
 };
 

@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef, useState, createElement, useMemo, useCallback, ElementType } from 'react';
-import { gsap } from 'gsap';
 
 interface TextTypeProps {
     className?: string;
@@ -86,14 +85,22 @@ const TextType = ({
 
     useEffect(() => {
         if (showCursor && cursorRef.current) {
-            gsap.set(cursorRef.current, { opacity: 1 });
-            gsap.to(cursorRef.current, {
-                opacity: 0,
-                duration: cursorBlinkDuration,
-                repeat: -1,
-                yoyo: true,
-                ease: 'power2.inOut'
-            });
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes blink {
+                    0%, 100% { opacity: 1; }
+                    50% { opacity: 0; }
+                }
+                .cursor-blink {
+                    animation: blink ${cursorBlinkDuration * 2}ms infinite;
+                }
+            `;
+            document.head.appendChild(style);
+            cursorRef.current.classList.add('cursor-blink');
+
+            return () => {
+                document.head.removeChild(style);
+            };
         }
     }, [showCursor, cursorBlinkDuration]);
 
