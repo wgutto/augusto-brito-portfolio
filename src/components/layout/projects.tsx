@@ -10,16 +10,17 @@ import { PostGreSqlSVG } from "../icons/postgresql"
 import { RevealRight } from "../ui/reveal-right"
 import { RevealLeft } from "../ui/reveal-left"
 import { PROJECTS } from "@/config/constants"
+import { ElementType } from "react"
 
-const technologyIcons: Record<string, React.ElementType> = {
-  "TypeScript": TypeScriptIconSVG,
-  "NextJs": NextJsIconSVG,
-  "React": ReactIconSVG,
-  "TailwindCSS": TailwindIconSVG,
-  "NodeJs": NodeJsIconSVG,
-  "Express": ExpressIconSVG,
-  "Prisma": PrimaIconSVG,
-  "PostgreSQL": PostGreSqlSVG
+const technologyIcons: Record<string, ElementType> = {
+    "TypeScript": TypeScriptIconSVG,
+    "NextJs": NextJsIconSVG,
+    "React": ReactIconSVG,
+    "TailwindCSS": TailwindIconSVG,
+    "NodeJs": NodeJsIconSVG,
+    "Express": ExpressIconSVG,
+    "Prisma": PrimaIconSVG,
+    "PostgreSQL": PostGreSqlSVG
 }
 
 export const Projects = () => {

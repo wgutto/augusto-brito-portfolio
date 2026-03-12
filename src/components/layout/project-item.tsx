@@ -20,7 +20,7 @@ type Props = {
 
 export const ProjectItem = ({ image, title, description, linkDemo, textLinkDemo, icons }: Props) => {
     return (
-        <div className="border p-4 rounded-md transition-all duration-500 hover:scale-101 shadow-lg">
+        <div className="border p-4 rounded-md shadow-md bg-card">
             <Image
                 src={image}
                 alt={title}
@@ -51,9 +51,9 @@ export const ProjectItem = ({ image, title, description, linkDemo, textLinkDemo,
                 </div>
 
                 <div className="flex items-center justify-between mt-2 border-t-2 pt-4">
-                    <Link href={linkDemo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 bg-blue-600 py-1 px-2 rounded-md cursor-pointer transition-all duration-300 hover:scale-102">
-                        <FaExternalLinkAlt className="size-3.5 text-white" />
-                        <span className="font-bold text-sm text-white">{textLinkDemo}</span>
+                    <Link href={linkDemo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-lg text-white text-sm font-semibold cursor-pointer transition-all duration-300 hover:scale-102 bg-blue-600 hover:bg-blue-700">
+                        <FaExternalLinkAlt className="size-3" />
+                        <span>{textLinkDemo}</span>
                     </Link>
 
                     <Link href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">

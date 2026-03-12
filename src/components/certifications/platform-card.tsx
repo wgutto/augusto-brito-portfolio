@@ -1,9 +1,9 @@
 "use client"
 
 import { useState } from "react";
-import { CertificationPlatform, Course } from "@/types/certifications.types";
-import { CourseRow } from "./CourseRow";
-import { CertificateModal } from "./CertificateModal";
+import { CertificationPlatform, Course } from "@/types/certifications";
+import { CourseRow } from "./course-row";
+import { CertificateModal } from "./certificate-modal";
 import Image from "next/image";
 
 interface PlatformCardProps {
@@ -13,6 +13,7 @@ interface PlatformCardProps {
 export const PlatformCard = ({ platform }: PlatformCardProps) => {
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   const handleCertificateClick = (course: Course) => {
     setSelectedCourse(course);
@@ -21,28 +22,24 @@ export const PlatformCard = ({ platform }: PlatformCardProps) => {
 
   return (
     <>
-      <div className="relative bg-card rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+      <div
+        className="relative bg-card rounded-xl border overflow-hidden shadow-md"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
         {/* Animated top border */}
         <div
           className="h-1 bg-transparent"
           style={{
             background: `linear-gradient(to right, ${platform.accentColor}, ${platform.accentColor})`,
             backgroundPosition: "0% 0%",
-            backgroundSize: "0% 100%",
+            backgroundSize: isHovered ? "100% 100%" : "0% 100%",
             backgroundRepeat: "no-repeat",
             transition: "background-size 0.4s ease-out"
           }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundSize = "100% 100%";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundSize = "0% 100%";
-          }}
         />
 
-        {/* Content */}
         <div className="p-6 flex flex-col gap-6">
-          {/* Platform header */}
           <div className="flex items-center gap-4">
             <div className="relative w-12 h-12 rounded-lg bg-muted flex items-center justify-center overflow-hidden">
               <Image
@@ -58,7 +55,7 @@ export const PlatformCard = ({ platform }: PlatformCardProps) => {
             </h3>
           </div>
 
-          {/* Courses list */}
+
           <div className="flex flex-col gap-2">
             {platform.courses.map((course) => (
               <CourseRow
@@ -72,7 +69,7 @@ export const PlatformCard = ({ platform }: PlatformCardProps) => {
         </div>
       </div>
 
-      {/* Certificate Modal */}
+
       {selectedCourse && (
         <CertificateModal
           isOpen={isModalOpen}

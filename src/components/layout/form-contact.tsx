@@ -45,7 +45,7 @@ export const FormContact = () => {
     }
 
     return (
-        <Card className="w-full sm:max-w-md dark:bg-white/10 shadow-lg">
+        <Card className="w-full shadow-md">
             <CardHeader>
                 <CardTitle>Envie uma mensagem</CardTitle>
                 <CardDescription>
@@ -159,7 +159,7 @@ export const FormContact = () => {
                 <Button
                     type="submit"
                     form="form-contact"
-                    className="cursor-pointer bg-blue-600 text-white hover:scale-105 hover:bg-blue-600"
+                    className="px-4 py-2 rounded-lg text-white text-sm font-semibold cursor-pointer transition-all duration-300 hover:scale-102 bg-blue-600 hover:bg-blue-700"
                     disabled={form.formState.isSubmitting}
                 >
                     {form.formState.isSubmitting ? "Enviando..." : "Enviar"}

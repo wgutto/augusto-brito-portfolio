@@ -36,7 +36,7 @@ const TextType = ({
     hideCursorWhileTyping = false,
     cursorCharacter = '|',
     cursorClassName = '',
-    cursorBlinkDuration = 0.5,
+    cursorBlinkDuration = 1000,
     textColors = [],
     variableSpeed,
     onSentenceComplete,
@@ -92,7 +92,7 @@ const TextType = ({
                     50% { opacity: 0; }
                 }
                 .cursor-blink {
-                    animation: blink ${cursorBlinkDuration * 2}ms infinite;
+                    animation: blink ${cursorBlinkDuration}ms infinite;
                 }
             `;
             document.head.appendChild(style);

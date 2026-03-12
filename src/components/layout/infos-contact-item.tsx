@@ -12,7 +12,7 @@ type Props = {
 
 export const InfosContactItem = ({icon, title, message, info, link}: Props) => {
     return (
-        <div className="w-full flex items-center p-2 gap-2 rounded-md cursor-pointer border hover:shadow-none md:p-4 dark:bg-white/10 shadow-lg dark:hover:bg-white/5">
+        <div className="w-full flex items-center p-2 gap-2 rounded-md cursor-pointer border bg-card shadow-md transition-all duration-300 hover:scale-102">
             {icon}
             <div className="border-l-2 pl-2">
                 <h1 className="text-md font-semibold">{title}</h1>

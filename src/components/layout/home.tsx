@@ -19,7 +19,6 @@ export const Home = () => {
                                     typingSpeed={150}
                                     pauseDuration={3000}
                                     cursorCharacter="|"
-                                    cursorBlinkDuration={0.3}
                                     className="text-lg md:text-2xl xl:text-3xl font-bold text-blue-600"
                                 />
                             </h1>
