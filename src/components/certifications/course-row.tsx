@@ -1,13 +1,13 @@
 "use client"
 
-import { Course } from "@/types/certifications";
-import { Award } from "lucide-react";
-import { Button } from "../ui/button";
+import { Course } from "@/types/certifications"
+import { Award } from "lucide-react"
+import { Button } from "../ui/button"
 
 interface CourseRowProps {
-  course: Course;
-  accentColor: string;
-  onCertificateClick: (course: Course) => void;
+  course: Course
+  accentColor: string
+  onCertificateClick: (course: Course) => void
 }
 
 export const CourseRow = ({ course, onCertificateClick }: CourseRowProps) => {
@@ -32,5 +32,5 @@ export const CourseRow = ({ course, onCertificateClick }: CourseRowProps) => {
         <span className="hidden sm:inline">Certificado</span>
       </Button>
     </div>
-  );
-};
+  )
+}

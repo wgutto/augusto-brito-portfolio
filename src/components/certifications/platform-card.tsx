@@ -1,24 +1,24 @@
 "use client"
 
-import { useState } from "react";
-import { CertificationPlatform, Course } from "@/types/certifications";
-import { CourseRow } from "./course-row";
-import { CertificateModal } from "./certificate-modal";
-import Image from "next/image";
+import { useState } from "react"
+import { CertificationPlatform, Course } from "@/types/certifications"
+import { CourseRow } from "./course-row"
+import { CertificateModal } from "./certificate-modal"
+import Image from "next/image"
 
 interface PlatformCardProps {
-  platform: CertificationPlatform;
+  platform: CertificationPlatform
 }
 
 export const PlatformCard = ({ platform }: PlatformCardProps) => {
-  const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+  const [selectedCourse, setSelectedCourse] = useState<Course | null>(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isHovered, setIsHovered] = useState(false)
 
   const handleCertificateClick = (course: Course) => {
-    setSelectedCourse(course);
-    setIsModalOpen(true);
-  };
+    setSelectedCourse(course)
+    setIsModalOpen(true)
+  }
 
   return (
     <>
@@ -35,7 +35,7 @@ export const PlatformCard = ({ platform }: PlatformCardProps) => {
             backgroundPosition: "0% 0%",
             backgroundSize: isHovered ? "100% 100%" : "0% 100%",
             backgroundRepeat: "no-repeat",
-            transition: "background-size 0.4s ease-out"
+            transition: "background-size 0.4s ease-out",
           }}
         />
 
@@ -55,7 +55,6 @@ export const PlatformCard = ({ platform }: PlatformCardProps) => {
             </h3>
           </div>
 
-
           <div className="flex flex-col gap-2">
             {platform.courses.map((course) => (
               <CourseRow
@@ -69,18 +68,17 @@ export const PlatformCard = ({ platform }: PlatformCardProps) => {
         </div>
       </div>
 
-
       {selectedCourse && (
         <CertificateModal
           isOpen={isModalOpen}
           onClose={() => {
-            setIsModalOpen(false);
-            setSelectedCourse(null);
+            setIsModalOpen(false)
+            setSelectedCourse(null)
           }}
           certificateImage={selectedCourse.certificateImage}
           courseName={selectedCourse.name}
         />
       )}
     </>
-  );
-};
+  )
+}

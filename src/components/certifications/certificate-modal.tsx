@@ -1,41 +1,41 @@
 "use client"
 
-import { useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
-import { X } from "lucide-react";
+import { useEffect, useRef } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import Image from "next/image"
+import { X } from "lucide-react"
 
 interface CertificateModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  certificateImage: string;
-  courseName: string;
+  isOpen: boolean
+  onClose: () => void
+  certificateImage: string
+  courseName: string
 }
 
 export const CertificateModal = ({
   isOpen,
   onClose,
   certificateImage,
-  courseName
+  courseName,
 }: CertificateModalProps) => {
-  const modalRef = useRef<HTMLDivElement>(null);
-  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const modalRef = useRef<HTMLDivElement>(null)
+  const closeButtonRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
-    if (!isOpen) return;
+    if (!isOpen) return
 
     // Focus trap
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
-        onClose();
-        return;
+        onClose()
+        return
       }
-    };
+    }
 
     // Focus on close button when modal opens
 
-    document.addEventListener("keydown", handleKeyDown);
-  }, [isOpen, onClose]);
+    document.addEventListener("keydown", handleKeyDown)
+  }, [isOpen, onClose])
 
   return (
     <AnimatePresence>
@@ -97,5 +97,5 @@ export const CertificateModal = ({
         </>
       )}
     </AnimatePresence>
-  );
-};
+  )
+}

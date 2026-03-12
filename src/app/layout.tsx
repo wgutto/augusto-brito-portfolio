@@ -1,18 +1,18 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import { ReactNode } from "react";
-import { ThemeProvider } from "@/components/theme-provider";
+import type { Metadata } from "next"
+import { Geist, Geist_Mono } from "next/font/google"
+import "./globals.css"
+import { ReactNode } from "react"
+import { ThemeProvider } from "@/components/theme-provider"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-});
+})
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-});
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://augustobrito.dev"),
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     "Next.js",
     "TypeScript",
     "Node.js",
-    "portfólio"
+    "portfólio",
   ],
   authors: [{ name: "Augusto Brito" }],
   creator: "Augusto Brito",
@@ -41,10 +41,10 @@ export const metadata: Metadata = {
         url: "/photos/foto-home.jpeg",
         width: 1200,
         height: 630,
-        alt: "Augusto Brito"
-      }
+        alt: "Augusto Brito",
+      },
     ],
-    type: "website"
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
@@ -52,18 +52,18 @@ export const metadata: Metadata = {
     description:
       "Desenvolvedor full-stack especializado em React, Next.js, TypeScript e Node.js",
     creator: "@wguttoo",
-    images: ["/photos/foto-home.jpeg"]
+    images: ["/photos/foto-home.jpeg"],
   },
   icons: {
     icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png"
-  }
-};
+    apple: "/apple-touch-icon.png",
+  },
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: ReactNode;
+  children: ReactNode
 }>) {
   return (
     <html lang="pt-br" suppressHydrationWarning>
@@ -80,5 +80,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }

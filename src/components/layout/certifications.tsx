@@ -1,9 +1,9 @@
 "use client"
 
-import { CERTIFICATIONS } from "@/config/certifications.data";
-import { PlatformCard } from "../certifications/platform-card";
-import { RevealRight } from "../ui/reveal-right";
-import { RevealLeft } from "../ui/reveal-left";
+import { CERTIFICATIONS } from "@/config/certifications-data"
+import { PlatformCard } from "../certifications/platform-card"
+import { RevealRight } from "../ui/reveal-right"
+import { RevealLeft } from "../ui/reveal-left"
 
 export const Certifications = () => {
   return (
@@ -17,7 +17,7 @@ export const Certifications = () => {
         {CERTIFICATIONS.map((certification, index) => {
           const isLeft = index % 2 === 0
           const Wrapper = isLeft ? RevealLeft : RevealRight
-          
+
           return (
             <Wrapper key={certification.id}>
               <PlatformCard platform={certification} />
@@ -28,11 +28,9 @@ export const Certifications = () => {
 
       {CERTIFICATIONS.length === 0 && (
         <div className="text-center mt-6">
-          <p className="text-muted-foreground">
-            Certificações em breve...
-          </p>
+          <p className="text-muted-foreground">Certificações em breve...</p>
         </div>
       )}
     </section>
-  );
-};
+  )
+}

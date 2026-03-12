@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from "zod"
 
 export const contactFormSchema = z.object({
   name: z
@@ -13,7 +13,7 @@ export const contactFormSchema = z.object({
   message: z
     .string()
     .min(10, "Mensagem deve ter pelo menos 10 caracteres")
-    .max(1000, "Mensagem deve ter no máximo 1000 caracteres")
-});
+    .max(1000, "Mensagem deve ter no máximo 1000 caracteres"),
+})
 
-export type ContactFormData = z.infer<typeof contactFormSchema>;
+export type ContactFormData = z.infer<typeof contactFormSchema>

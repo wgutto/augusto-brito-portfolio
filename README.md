@@ -21,6 +21,7 @@ Tenho perfil analítico, atenção aos detalhes e interesse em projetos que me d
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - **TypeScript** - Tipagem estática
 - **React 19** - Biblioteca UI
 - **Next.js 16** - Framework React
@@ -28,17 +29,20 @@ Tenho perfil analítico, atenção aos detalhes e interesse em projetos que me d
 - **Framer Motion** - Animações
 
 ### Backend
+
 - **Node.js** - Runtime JavaScript
 - **Express** - Framework web
 - **TypeScript** - Tipagem estática
 
 ### Banco de Dados
+
 - **PostgreSQL** - SQL relacional
 - **MongoDB** - NoSQL document
 - **MySQL** - SQL relacional
 - **Prisma ORM** - Database toolkit
 
 ### Outros
+
 - **React Hook Form** - Gestão de formulários
 - **Zod** - Validação de schemas
 - **Next Themes** - Dark mode support
@@ -72,6 +76,7 @@ src/
 ## 🚀 Como Executar
 
 ### Pré-requisitos
+
 - Node.js 18+ ou npm/yarn
 
 ### Instalação
