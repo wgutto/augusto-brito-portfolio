@@ -23,8 +23,8 @@ Tenho perfil analítico, atenção aos detalhes e interesse em projetos que me d
 ### Frontend
 
 - **TypeScript** - Tipagem estática
-- **React 19** - Biblioteca UI
-- **Next.js 16** - Framework React
+- **React** - Biblioteca UI
+- **Next.js** - Framework React
 - **TailwindCSS** - Utility-first CSS
 - **Framer Motion** - Animações
 
@@ -40,38 +40,6 @@ Tenho perfil analítico, atenção aos detalhes e interesse em projetos que me d
 - **MongoDB** - NoSQL document
 - **MySQL** - SQL relacional
 - **Prisma ORM** - Database toolkit
-
-### Outros
-
-- **React Hook Form** - Gestão de formulários
-- **Zod** - Validação de schemas
-- **Next Themes** - Dark mode support
-
-## 📁 Estrutura do Projeto
-
-```
-src/
-├── app/
-│   ├── layout.tsx          # Layout raiz com metadata SEO
-│   ├── page.tsx            # Página principal
-│   └── globals.css         # Estilos globais
-├── components/
-│   ├── layout/             # Componentes de seções
-│   │   ├── header.tsx
-│   │   ├── home.tsx
-│   │   ├── about.tsx
-│   │   ├── projects.tsx
-│   │   ├── contact.tsx
-│   │   └── footer.tsx
-│   ├── ui/                 # Componentes UI reutilizáveis
-│   ├── icons/              # SVG icons customizados
-│   └── theme-provider.tsx  # Provider de tema
-├── config/
-│   └── constants.ts        # Constantes (links, dados)
-└── lib/
-    ├── utils.ts            # Funções utilitárias
-    └── validations.ts      # Schemas Zod
-```
 
 ## 🚀 Como Executar
 
@@ -121,4 +89,4 @@ Este projeto é de uso pessoal e está disponível como portfólio. Sinta-se liv
 
 ---
 
-Desenvolvido com ❤️ por **Augusto Brito** | 2026
+Desenvolvido por **Augusto Brito** | 2026
