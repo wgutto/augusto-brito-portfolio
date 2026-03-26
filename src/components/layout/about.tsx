@@ -20,64 +20,64 @@ import { PostGreSqlSVG } from "../icons/postgresql"
 import { ABOUT_INFO } from "@/config/constants"
 
 export const About = () => {
-  return (
-    <section
-      id="about"
-      className="relative w-full min-h-screen flex flex-col items-center justify-center snap-start px-4 py-20 overflow-hidden md:py-0 dark:bg-linear-to-b dark:from-black dark:to-[#020617]"
-    >
-      <h1 className="text-2xl md:text-3xl font-bold">Sobre</h1>
+    return (
+        <section
+            id="about"
+            className="relative w-full min-h-screen flex flex-col items-center justify-center snap-start px-4 py-20 overflow-hidden md:py-0 dark:bg-linear-to-b dark:from-black dark:to-[#020617]"
+        >
+            <h1 className="text-2xl md:text-3xl font-bold">Sobre</h1>
 
-      <div className="w-full max-w-6xl flex flex-col justify-center mt-6 lg:items-center lg:gap-6 lg:flex-row">
-        <RevealLeft>
-          <div className="hidden lg:flex shadow-2xl rounded-[48px]">
-            <GlareCard className="relative w-88 h-70 md:w-100 md:h-150">
-              <Image
-                src={"/photos/foto-home.jpeg"}
-                alt="Foto Augusto Brito"
-                fill
-                className="object-cover object-top"
-              />
-            </GlareCard>
-          </div>
-        </RevealLeft>
-        <RevealRight>
-          <div className="w-full flex flex-col gap-4">
-            <div className="flex flex-col text-md text-justify text-muted-foreground gap-2 leading-relaxed min-[428]:text-lg font-semibold md:text-xl">
-              <p>{ABOUT_INFO.description1}</p>
-              <p>{ABOUT_INFO.description2}</p>
+            <div className="w-full max-w-6xl flex flex-col justify-center mt-6 lg:items-center lg:gap-6 lg:flex-row">
+                <RevealLeft>
+                    <div className="hidden lg:flex shadow-2xl rounded-[48px]">
+                        <GlareCard className="relative w-88 h-70 md:w-100 md:h-150">
+                            <Image
+                                src={"/photos/foto-home.jpeg"}
+                                alt="Foto Augusto Brito"
+                                fill
+                                className="object-cover object-top"
+                            />
+                        </GlareCard>
+                    </div>
+                </RevealLeft>
+                <RevealRight>
+                    <div className="w-full flex flex-col gap-4">
+                        <div className="flex flex-col text-md text-justify text-muted-foreground gap-2 leading-relaxed min-[428]:text-lg font-semibold md:text-xl">
+                            <p>{ABOUT_INFO.description1}</p>
+                            <p>{ABOUT_INFO.description2}</p>
+                        </div>
+                        <h2 className="text-center text-xl font-semibold">Habilidades</h2>
+                        <div className="border-l-2 pl-2">
+                            <h3 className="font-semibold pb-2">Frontend</h3>
+                            <div className="flex items-center gap-2">
+                                <TypeScriptIconSVG className="size-12" />
+                                <ReactIconSVG className="size-12" />
+                                <TailwindIconSVG className="size-12" />
+                                <NextJsIconSVG className="size-12" />
+                                <ViteJsIconSVG className="size-12" />
+                                <HTMLIconSVG className="size-12" />
+                                <CSSIconSVG className="size-12" />
+                            </div>
+                        </div>
+                        <div className="border-l-2 pl-2">
+                            <h3 className="font-semibold pb-2">Backend</h3>
+                            <div className="flex items-center gap-2">
+                                <NodeJsIconSVG className="size-12" />
+                                <ExpressIconSVG className="size-12 text-black dark:text-white" />
+                                <PrimaIconSVG className="size-12 text-black dark:text-white" />
+                            </div>
+                        </div>
+                        <div className="border-l-2 pl-2">
+                            <h3 className="font-semibold pb-2">Banco de dados</h3>
+                            <div className="flex items-center gap-2">
+                                <MySqlIconSVG className="size-12 text-black dark:text-white" />
+                                <MongoDbIconSVG className="size-12" />
+                                <PostGreSqlSVG className="size-12" />
+                            </div>
+                        </div>
+                    </div>
+                </RevealRight>
             </div>
-            <h2 className="text-center text-xl font-semibold">Habilidades</h2>
-            <div className="border-l-2 pl-2">
-              <h3 className="font-semibold pb-2">Frontend</h3>
-              <div className="flex items-center gap-2">
-                <TypeScriptIconSVG className="size-12" />
-                <ReactIconSVG className="size-12" />
-                <TailwindIconSVG className="size-12" />
-                <NextJsIconSVG className="size-12" />
-                <ViteJsIconSVG className="size-12" />
-                <HTMLIconSVG className="size-12" />
-                <CSSIconSVG className="size-12" />
-              </div>
-            </div>
-            <div className="border-l-2 pl-2">
-              <h3 className="font-semibold pb-2">Backend</h3>
-              <div className="flex items-center gap-2">
-                <NodeJsIconSVG className="size-12" />
-                <ExpressIconSVG className="size-12 text-black dark:text-white" />
-                <PrimaIconSVG className="size-12 text-black dark:text-white" />
-              </div>
-            </div>
-            <div className="border-l-2 pl-2">
-              <h3 className="font-semibold pb-2">Banco de dados</h3>
-              <div className="flex items-center gap-2">
-                <MySqlIconSVG className="size-12 text-black dark:text-white" />
-                <MongoDbIconSVG className="size-12" />
-                <PostGreSqlSVG className="size-12" />
-              </div>
-            </div>
-          </div>
-        </RevealRight>
-      </div>
-    </section>
-  )
+        </section>
+    )
 }

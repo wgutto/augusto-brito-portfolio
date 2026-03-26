@@ -7,19 +7,19 @@ import { Home } from "@/components/layout/home"
 import { Projects } from "@/components/layout/projects"
 
 export const Page = () => {
-  return (
-    <div>
-      <Header />
-      <main className="w-full min-h-screen snap-y snap-mandatory">
-        <Home />
-        <About />
-        <Projects />
-        <Certifications />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
-  )
+    return (
+        <div>
+            <Header />
+            <main className="w-full min-h-screen snap-y snap-mandatory">
+                <Home />
+                <About />
+                <Projects />
+                <Certifications />
+                <Contact />
+            </main>
+            <Footer />
+        </div>
+    )
 }
 
 export default Page

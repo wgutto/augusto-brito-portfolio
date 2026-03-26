@@ -1,63 +1,152 @@
-import { CertificationPlatform } from "@/types/certifications"
+import { Course } from "@/types/certifications"
 
-export const CERTIFICATIONS: CertificationPlatform[] = [
-  {
-    id: "alura",
-    name: "Alura",
-    accentColor: "#0086C9",
-    logoSrc: "/logos/logo-alura.png",
-    courses: [
-      {
+export const courses: Course[] = [
+    {
         id: "alura-001",
-        name: "Node.js: lidando com buscas, filtros, paginação e erros em uma API",
-        duration: "10h",
-        certificateImage:
-          "/certificates/alura/alura-buscas-filtros-paginacao-erros.png",
-      },
-      {
+        platformName: "Alura",
+        name: "Node.js: Lidando com buscas, filtros, paginação e erros em uma API",
+        duration: 10,
+        skillArea: "BACKEND",
+        certificateImage: "/certificates/alura/alura-buscas-filtros-paginacao-erros.png",
+    },
+    {
         id: "alura-002",
-        name: "Node.js: criando uma API Rest com Express e MongoDB",
-        duration: "10h",
+        platformName: "Alura",
+        name: "Node.js: Criando uma API Rest com Express e MongoDB",
+        duration: 10,
+        skillArea: "BACKEND",
         certificateImage: "/certificates/alura/alura-node-express-mongo.png",
-      },
-    ],
-  },
-  {
-    id: "b7web",
-    name: "B7Web",
-    accentColor: "#0086C9",
-    logoSrc: "/logos/logo-b7web.png",
-    courses: [
-      {
+    },
+    {
+        id: "alura-003",
+        platformName: "Alura",
+        name: "Docker: Criando e gerenciando containers",
+        duration: 10,
+        skillArea: "INFRAANDDEVOPS",
+        certificateImage: "/certificates/alura/alura-docker-criando-e-gerenciando-containers.png",
+    },
+    {
+        id: "alura-004",
+        platformName: "Alura",
+        name: "ESLint: Padronizando código com regras personalizadas",
+        duration: 4,
+        skillArea: "QUALITYANDTOOLS",
+        certificateImage:
+            "/certificates/alura/alura-eslint-padronizando-codigo-com-regras-personalizadas.png",
+    },
+    {
+        id: "alura-005",
+        platformName: "Alura",
+        name: "ORM com Node.js: Desenvolvendo uma API com Sequelize e SQLite",
+        duration: 10,
+        skillArea: "BACKEND",
+        certificateImage:
+            "/certificates/alura/alura-orm-com-node-desenvolvendo-uma-api-com-sequelize-e-sqlite.png",
+    },
+    {
+        id: "alura-006",
+        platformName: "Alura",
+        name: "ORM com Node.js: Avançando nas funcionalidades do Sequelize",
+        duration: 10,
+        skillArea: "BACKEND",
+        certificateImage:
+            "/certificates/alura/alura-orm-com-node-avancando-nas-funcionalidades-do-sequelize.png",
+    },
+    {
+        id: "alura-007",
+        platformName: "Alura",
+        name: "Swagger: Documentando APIs REST com OpenAPI",
+        duration: 6,
+        skillArea: "QUALITYANDTOOLS",
+        certificateImage:
+            "/certificates/alura/alura-swagger-documentando-apis-rest-com-openapi.png",
+    },
+    {
         id: "b7web-001",
+        platformName: "B7Web",
         name: "JavaScript",
-        duration: "77h",
+        duration: 77,
+        skillArea: "FRONTEND",
         certificateImage: "/certificates/b7web/b7web-javascript.png",
-      },
-      {
+    },
+    {
         id: "b7web-002",
-        name: "TypeScript",
-        duration: "5h",
-        certificateImage: "/certificates/b7web/b7web-typescript.png",
-      },
-      {
+        platformName: "B7Web",
+        name: "JavaScript Avançado",
+        duration: 17,
+        skillArea: "FRONTEND",
+        certificateImage: "/certificates/b7web/b7web-javascriptavancado.png",
+    },
+    {
         id: "b7web-003",
-        name: "ReactJS",
-        duration: "12h",
-        certificateImage: "/certificates/b7web/b7web-react.png",
-      },
-      {
+        platformName: "B7Web",
+        name: "TypeScript do Zero",
+        duration: 5,
+        skillArea: "BOTH",
+        certificateImage: "/certificates/b7web/b7web-typescript.png",
+    },
+    {
         id: "b7web-004",
-        name: "TailwindCSS",
-        duration: "8h",
-        certificateImage: "/certificates/b7web/b7web-tailwindcss.png",
-      },
-      {
+        platformName: "B7Web",
+        name: "React",
+        duration: 12,
+        skillArea: "FRONTEND",
+        certificateImage: "/certificates/b7web/b7web-react.png",
+    },
+    {
         id: "b7web-005",
-        name: "HTML5 & CSS3",
-        duration: "89h",
-        certificateImage: "/certificates/b7web/b7web-html5-css3.png",
-      },
-    ],
-  },
+        platformName: "B7Web",
+        name: "React Intermediário",
+        duration: 12,
+        skillArea: "FRONTEND",
+        certificateImage: "/certificates/b7web/b7web-reactintermediario.png",
+    },
+    {
+        id: "b7web-006",
+        platformName: "B7Web",
+        name: "TailwindCSS",
+        duration: 8,
+        skillArea: "FRONTEND",
+        certificateImage: "/certificates/b7web/b7web-tailwindcss.png",
+    },
+    {
+        id: "b7web-007",
+        platformName: "B7Web",
+        name: "Fundamentos de NextJS",
+        duration: 6,
+        skillArea: "FRONTEND",
+        certificateImage: "/certificates/b7web/b7web-fudamentos-de-nextjs.png",
+    },
+    {
+        id: "b7web-008",
+        platformName: "B7Web",
+        name: "Zod com Node",
+        duration: 3,
+        skillArea: "BACKEND",
+        certificateImage: "/certificates/b7web/b7web-zod-com-node.png",
+    },
+    {
+        id: "b7web-009",
+        platformName: "B7Web",
+        name: "Criação de API com Node",
+        duration: 5,
+        skillArea: "BACKEND",
+        certificateImage: "/certificates/b7web/b7web-criacao-de-api-com-node.png",
+    },
+    {
+        id: "b7web-010",
+        platformName: "B7Web",
+        name: "Fundamentos de NodeJS",
+        duration: 11,
+        skillArea: "BACKEND",
+        certificateImage: "/certificates/b7web/b7web-fundamentos-de-nodejs.png",
+    },
+    {
+        id: "b7web-011",
+        platformName: "B7Web",
+        name: "SQL do Zero",
+        duration: 6,
+        skillArea: "BACKEND",
+        certificateImage: "/certificates/b7web/b7web-sql-do-zero.png",
+    },
 ]
