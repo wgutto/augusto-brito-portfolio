@@ -76,10 +76,6 @@ export const CertificateModal = ({
 
                             {/* Content */}
                             <div>
-                                {/* <h2 id="modal-title" className="sr-only">
-                  Certificado: {courseName}
-                </h2> */}
-
                                 <div>
                                     <Image
                                         src={certificateImage}

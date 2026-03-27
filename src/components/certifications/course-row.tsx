@@ -20,7 +20,7 @@ export const CourseRow = ({ course, onCertificateClick }: CourseRowProps) => {
                     <TooltipContent>{course.name}</TooltipContent>
                 </Tooltip>
 
-                <div className="flex items-center gap-1 font-semibold text-[12px] text-muted-foreground">
+                <div className="flex items-center gap-1 font-semibold text-sm text-muted-foreground">
                     <p>{course.platformName}</p> - <p>{course.duration}h</p>
                 </div>
             </div>

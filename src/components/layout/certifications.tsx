@@ -16,6 +16,8 @@ export const Certifications = () => {
     const coursesInfraAndDevops = courses.filter((item) => item.skillArea === "INFRAANDDEVOPS")
     const coursesQualityAndTools = courses.filter((item) => item.skillArea === "QUALITYANDTOOLS")
 
+    const studyHours = courses.reduce((acc, item) => acc + item.duration, 0)
+
     return (
         <section
             id="certifications"
@@ -23,7 +25,24 @@ export const Certifications = () => {
         >
             <h1 className="text-2xl md:text-3xl font-bold">Certificações</h1>
 
-            <Tabs defaultValue="frontend&backend" className="w-full max-w-6xl gap-8 mt-6">
+            <div className="flex items-center gap-4 my-6">
+                <div className="bg-card border-2 rounded-md py-2 px-4">
+                    <h1 className="font-bold text-lg">{courses.length}</h1>
+
+                    <p className="text-sm text-muted-foreground">certificações</p>
+                </div>
+
+                <div className="bg-card border-2 rounded-md py-2 px-4">
+                    <p className="font-bold text-lg">+{studyHours}h</p>
+                    <p className="text-sm text-muted-foreground">horas de estudo</p>
+                </div>
+                <div className="bg-card border-2 rounded-md py-2 px-4">
+                    <p className="font-bold text-lg">4</p>
+                    <p className="text-sm text-muted-foreground">áreas</p>
+                </div>
+            </div>
+
+            <Tabs defaultValue="frontend&backend" className="w-full max-w-6xl gap-8">
                 <TabsList variant={"line"} className="mx-auto">
                     <TabsTrigger value="frontend&backend" className="cursor-pointer">
                         Frontend & Backend
