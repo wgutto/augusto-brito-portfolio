@@ -1,3 +1,5 @@
+import { Stack } from "@/types/stack"
+
 // Social media links
 export const SOCIAL_LINKS = {
     github: "https://github.com/wgutto",
@@ -27,7 +29,7 @@ export const PROJECTS = [
         description:
             "Sistema web de gerenciamento de pedidos para pizzaria com autenticação de usuários, permitindo acompanhar pedidos em tempo real e organizar o fluxo de produção da cozinha.",
         link: "https://github.com/wgutto/brito-pizzaria",
-        linkText: "Projeto em desenvolvimento",
+        linkText: "Em desenvolvimento",
         technologies: [
             "TypeScript",
             "NextJs",
@@ -61,22 +63,37 @@ export const PROJECTS = [
     },
 ] as const
 
-// About info
-export const ABOUT_INFO = {
-    name: "Augusto Brito",
-    age: 23,
-    role: "Full-Stack Developer",
-    location: "Ceará, Brasil",
-    education: "Estudante de Engenharia de Software",
-    description1:
-        "Sou Augusto Brito, desenvolvedor full-stack de 23 anos e estudante de Engenharia de Software, residente no Ceará, Brasil. Atuo no desenvolvimento de aplicações web modernas, com foco em performance, organização de código e uma experiência de usuário bem construída.",
-    description2:
-        "Estou em constante evolução, buscando aprimorar minhas habilidades técnicas e aprofundar meus conhecimentos em boas práticas e arquitetura de software. Tenho perfil analítico, atenção aos detalhes e interesse em projetos que me desafiem a crescer e gerar impacto por meio da tecnologia.",
-} as const
-
-// Skills
-export const SKILLS = {
-    frontend: ["TypeScript", "React", "TailwindCSS", "NextJs", "ViteJs", "HTML", "CSS"],
-    backend: ["NodeJs", "Express", "Prisma"],
-    databases: ["MySQL", "MongoDB", "PostgreSQL"],
-} as const
+export const stacks: Stack[] = [
+    {
+        stackName: "TypeScript",
+        color: "#378ADD"
+    },
+    {
+        stackName: "React",
+        color: "#378ADD"
+    },
+    {
+        stackName: "Next.js",
+        color: "#378ADD"
+    },
+    {
+        stackName: "TailwindCSS",
+        color: "#378ADD"
+    },
+    {
+        stackName: "Node.js",
+        color: "#1D9E75"
+    },
+    {
+        stackName: "Express",
+        color: "#1D9E75"
+    },
+    {
+        stackName: "PostgreSQL",
+        color: "#BA7517"
+    },
+    {
+        stackName: "MongoDB",
+        color: "#BA7517"
+    },
+]

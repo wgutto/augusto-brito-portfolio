@@ -5,7 +5,7 @@ import Link from "next/link"
 import { FormContact } from "./form-contact"
 import { RevealLeft } from "../ui/reveal-left"
 import { RevealRight } from "../ui/reveal-right"
-import { SOCIAL_LINKS } from "@/config/constants"
+import { SOCIAL_LINKS } from "@/data/constants"
 
 export const Contact = () => {
     return (

@@ -17,7 +17,11 @@ import { PrimaIconSVG } from "../icons/prisma"
 import { MySqlIconSVG } from "../icons/mysql-icon"
 import { MongoDbIconSVG } from "../icons/mongodb-icon"
 import { PostGreSqlSVG } from "../icons/postgresql"
-import { ABOUT_INFO } from "@/config/constants"
+import { stacks } from "@/data/constants"
+import { StackRow } from "../about/stack-row"
+import { Button } from "../ui/button"
+import { ExternalLink } from "lucide-react"
+import Link from "next/link"
 
 export const About = () => {
     return (
@@ -42,38 +46,31 @@ export const About = () => {
                 </RevealLeft>
                 <RevealRight>
                     <div className="w-full flex flex-col gap-4">
-                        <div className="flex flex-col text-md text-justify text-muted-foreground gap-2 leading-relaxed min-[428]:text-lg font-semibold md:text-xl">
-                            <p>{ABOUT_INFO.description1}</p>
-                            <p>{ABOUT_INFO.description2}</p>
+                        <div className="flex flex-col gap-4">
+                            <h1 className="text-2xl font-bold">Augusto Brito</h1>
+
+                            <p className="text-muted-foreground text-xl text-left">Desenvolvedor <span className="text-black font-semibold dark:text-white">Full-Stack</span> apaixonado por construir aplicações web que aliam boa performance a uma experiência de usuário cuidadosa. Tenho 23 anos, estudo Engenharia de Software e sou do Ceará, Brasil.</p>
+
+                            <p className="text-muted-foreground text-xl text-left">Gosto de código bem organizado, de entender o porquê das coisas e de projetos que exijam pensar além do óbvio. Estou sempre aprendendo, atualmente aprofundando em arquitetura de software e boas práticas que fazem a diferença no longo prazo.</p>
                         </div>
-                        <h2 className="text-center text-xl font-semibold">Habilidades</h2>
-                        <div className="border-l-2 pl-2">
-                            <h3 className="font-semibold pb-2">Frontend</h3>
-                            <div className="flex items-center gap-2">
-                                <TypeScriptIconSVG className="size-12" />
-                                <ReactIconSVG className="size-12" />
-                                <TailwindIconSVG className="size-12" />
-                                <NextJsIconSVG className="size-12" />
-                                <ViteJsIconSVG className="size-12" />
-                                <HTMLIconSVG className="size-12" />
-                                <CSSIconSVG className="size-12" />
+
+                        <div className="flex flex-col border-y-2 py-4 gap-2">
+                            <p className="text-muted-foreground font-semibold text-sm">Stack principal</p>
+
+                            <div className="flex gap-4 flex-wrap">
+                                {stacks.map((item, index) =>
+                                    <StackRow key={index} stackName={item.stackName} color={item.color}/>
+                                )}
                             </div>
                         </div>
-                        <div className="border-l-2 pl-2">
-                            <h3 className="font-semibold pb-2">Backend</h3>
-                            <div className="flex items-center gap-2">
-                                <NodeJsIconSVG className="size-12" />
-                                <ExpressIconSVG className="size-12 text-black dark:text-white" />
-                                <PrimaIconSVG className="size-12 text-black dark:text-white" />
-                            </div>
-                        </div>
-                        <div className="border-l-2 pl-2">
-                            <h3 className="font-semibold pb-2">Banco de dados</h3>
-                            <div className="flex items-center gap-2">
-                                <MySqlIconSVG className="size-12 text-black dark:text-white" />
-                                <MongoDbIconSVG className="size-12" />
-                                <PostGreSqlSVG className="size-12" />
-                            </div>
+
+                        <div>
+                            <Link href={"https://github.com/wgutto?tab=repositories"} target="_blank" className="flex">
+                                <div className="text-sm flex items-center gap-2 px-2 py-2 rounded-md text-white cursor-pointer bg-blue-600 hover:bg-blue-700">
+                                    <span>Ver projetos</span>
+                                    <ExternalLink className="size-4"/>
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </RevealRight>

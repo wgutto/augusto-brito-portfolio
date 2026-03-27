@@ -143,10 +143,10 @@ export const FormContact = () => {
                 <Button
                     type="submit"
                     form="form-contact"
-                    className="px-4 py-2 rounded-lg text-white text-sm font-semibold cursor-pointer transition-all duration-300 hover:scale-102 bg-blue-600 hover:bg-blue-700"
+                    className="flex font-normal items-center gap-2 p-2 rounded-md text-white cursor-pointer bg-blue-600 hover:bg-blue-700"
                     disabled={form.formState.isSubmitting}
                 >
-                    {form.formState.isSubmitting ? "Enviando..." : "Enviar"}
+                    {form.formState.isSubmitting ? "Enviando..." : "Enviar mensagem"}
                 </Button>
             </CardFooter>
         </Card>

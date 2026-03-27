@@ -11,7 +11,7 @@ import {
     NavItems,
 } from "../ui/resizable-navbar"
 import { useState } from "react"
-import { NAV_ITEMS } from "@/config/constants"
+import { NAV_ITEMS } from "@/data/constants"
 
 export const Header = () => {
     const [isOpen, setIsOpen] = useState(false)

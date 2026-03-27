@@ -1,6 +1,6 @@
 "use client"
 
-import { courses } from "@/config/certifications-data"
+import { courses } from "@/data/certifications-data"
 import { CertificateCard } from "../certifications/certificate-card"
 import { RevealRight } from "../ui/reveal-right"
 import { RevealLeft } from "../ui/reveal-left"

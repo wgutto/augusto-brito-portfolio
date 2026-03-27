@@ -9,7 +9,7 @@ import { PrimaIconSVG } from "../icons/prisma"
 import { PostGreSqlSVG } from "../icons/postgresql"
 import { RevealRight } from "../ui/reveal-right"
 import { RevealLeft } from "../ui/reveal-left"
-import { PROJECTS } from "@/config/constants"
+import { PROJECTS } from "@/data/constants"
 import { ElementType } from "react"
 
 const technologyIcons: Record<string, ElementType> = {

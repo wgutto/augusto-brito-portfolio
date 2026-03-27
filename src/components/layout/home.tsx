@@ -4,7 +4,7 @@ import Image from "next/image"
 import TextType from "../ui/text-type"
 import Link from "next/link"
 import RevealZoom from "../ui/reveal-zoom"
-import { SOCIAL_LINKS } from "@/config/constants"
+import { SOCIAL_LINKS } from "@/data/constants"
 
 export const Home = () => {
     return (

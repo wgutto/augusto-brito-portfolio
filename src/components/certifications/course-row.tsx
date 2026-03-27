@@ -27,7 +27,7 @@ export const CourseRow = ({ course, onCertificateClick }: CourseRowProps) => {
 
             <Button
                 onClick={() => onCertificateClick(course)}
-                className="bg-transparent text-black font-semibold border cursor-pointer transition-all duration-200 hover:bg-transparent hover:scale-102 dark:text-white"
+                className="text-sm font-normal flex items-center gap-2 p-2 rounded-md text-white cursor-pointer bg-blue-600 hover:bg-blue-700"
                 aria-label={`Ver certificado de ${course.name}`}
             >
                 Ver certificado

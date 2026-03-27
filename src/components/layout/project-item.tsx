@@ -2,7 +2,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { ElementType } from "react"
 import { FaExternalLinkAlt } from "react-icons/fa"
-import { SOCIAL_LINKS } from "@/config/constants"
+import { SOCIAL_LINKS } from "@/data/constants"
+import { ExternalLink } from "lucide-react"
 
 type IconType = {
     icon: ElementType
@@ -56,10 +57,12 @@ export const ProjectItem = ({
                         href={linkDemo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 rounded-lg text-white text-sm font-semibold cursor-pointer transition-all duration-300 hover:scale-102 bg-blue-600 hover:bg-blue-700"
+                        className="flex"
                     >
-                        <FaExternalLinkAlt className="size-3" />
-                        <span>{textLinkDemo}</span>
+                        <div className="text-sm flex items-center gap-2 p-2 rounded-md text-white cursor-pointer bg-blue-600 hover:bg-blue-700">
+                            <span>{textLinkDemo}</span>
+                            <ExternalLink className="size-4"/>
+                        </div>
                     </Link>
 
                     <Link
