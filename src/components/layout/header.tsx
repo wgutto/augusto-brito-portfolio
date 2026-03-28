@@ -17,7 +17,7 @@ export const Header = () => {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <header className="fixed w-full top-2 z-50">
+        <header className="fixed w-full top-2 z-50 px-2">
             <Navbar>
                 <NavBody>
                     <NavbarLogo />

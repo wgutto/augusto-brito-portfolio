@@ -25,74 +25,71 @@ export const Certifications = () => {
         >
             <h1 className="text-2xl md:text-3xl font-bold">Certificações</h1>
 
-            <div className="flex items-center gap-4 my-6">
-                <div className="bg-card border-2 rounded-md py-2 px-4">
-                    <h1 className="font-bold text-lg">{courses.length}</h1>
-
-                    <p className="text-sm text-muted-foreground">certificações</p>
+            <div className="w-full max-w-2xl lg:max-w-4xl xl:max-w-6xl mt-6">
+                <div className="flex justify-center gap-4 mb-6">
+                    <div className="bg-card border-2 rounded-md py-2 px-4">
+                        <h1 className="font-bold text-lg">{courses.length}</h1>
+                        <p className="text-sm text-muted-foreground">certificações</p>
+                    </div>
+                    <div className="bg-card border-2 rounded-md py-2 px-4">
+                        <p className="font-bold text-lg">+{studyHours}h</p>
+                        <p className="text-sm text-muted-foreground">horas de estudo</p>
+                    </div>
+                    <div className="bg-card border-2 rounded-md py-2 px-4">
+                        <p className="font-bold text-lg">4</p>
+                        <p className="text-sm text-muted-foreground">áreas</p>
+                    </div>
                 </div>
-
-                <div className="bg-card border-2 rounded-md py-2 px-4">
-                    <p className="font-bold text-lg">+{studyHours}h</p>
-                    <p className="text-sm text-muted-foreground">horas de estudo</p>
-                </div>
-                <div className="bg-card border-2 rounded-md py-2 px-4">
-                    <p className="font-bold text-lg">4</p>
-                    <p className="text-sm text-muted-foreground">áreas</p>
-                </div>
+                
+                <Tabs defaultValue="frontend&backend" className="w-full max-w-6xl gap-8">
+                    <TabsList variant={"line"} className="mx-auto">
+                        <TabsTrigger value="frontend&backend" className="cursor-pointer">
+                            Frontend & Backend
+                        </TabsTrigger>
+                        <TabsTrigger value="qualityandtools&infraanddevops" className="cursor-pointer">
+                            DevOps
+                        </TabsTrigger>
+                    </TabsList>
+                    <TabsContent
+                        value="frontend&backend"
+                        className="grid grid-cols-1 md:grid-cols-2 gap-6"
+                    >
+                        <RevealLeft>
+                            <CertificateCard
+                                color="#378ADD"
+                                courses={coursesFrontend}
+                                skillAreaName="Frontend"
+                            />
+                        </RevealLeft>
+                        <RevealRight>
+                            <CertificateCard
+                                color="#1D9E75"
+                                courses={coursesBackend}
+                                skillAreaName="Backend"
+                            />
+                        </RevealRight>
+                    </TabsContent>
+                    <TabsContent
+                        value="qualityandtools&infraanddevops"
+                        className="grid grid-cols-1 md:grid-cols-2 gap-6"
+                    >
+                        <RevealLeft>
+                            <CertificateCard
+                                color="#BA7517"
+                                courses={coursesInfraAndDevops}
+                                skillAreaName="Infra & DevOps"
+                            />
+                        </RevealLeft>
+                        <RevealRight>
+                            <CertificateCard
+                                color="#7F77DD"
+                                courses={coursesQualityAndTools}
+                                skillAreaName="Qualidade & Ferramentas"
+                            />
+                        </RevealRight>
+                    </TabsContent>
+                </Tabs>
             </div>
-
-            <Tabs defaultValue="frontend&backend" className="w-full max-w-6xl gap-8">
-                <TabsList variant={"line"} className="mx-auto">
-                    <TabsTrigger value="frontend&backend" className="cursor-pointer">
-                        Frontend & Backend
-                    </TabsTrigger>
-                    <TabsTrigger value="qualityandtools&infraanddevops" className="cursor-pointer">
-                        DevOps
-                    </TabsTrigger>
-                </TabsList>
-                <TabsContent
-                    value="frontend&backend"
-                    className="grid grid-cols-1 md:grid-cols-2 gap-6"
-                >
-                    <RevealLeft>
-                        <CertificateCard
-                            color="#378ADD"
-                            courses={coursesFrontend}
-                            skillAreaName="Frontend"
-                        />
-                    </RevealLeft>
-
-                    <RevealRight>
-                        <CertificateCard
-                            color="#1D9E75"
-                            courses={coursesBackend}
-                            skillAreaName="Backend"
-                        />
-                    </RevealRight>
-                </TabsContent>
-
-                <TabsContent
-                    value="qualityandtools&infraanddevops"
-                    className="grid grid-cols-1 md:grid-cols-2 gap-6"
-                >
-                    <RevealLeft>
-                        <CertificateCard
-                            color="#BA7517"
-                            courses={coursesInfraAndDevops}
-                            skillAreaName="Infra & DevOps"
-                        />
-                    </RevealLeft>
-
-                    <RevealRight>
-                        <CertificateCard
-                            color="#7F77DD"
-                            courses={coursesQualityAndTools}
-                            skillAreaName="Qualidade & Ferramentas"
-                        />
-                    </RevealRight>
-                </TabsContent>
-            </Tabs>
 
             {courses.length === 0 && (
                 <div className="text-center mt-6">

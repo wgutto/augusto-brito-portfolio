@@ -1,7 +1,7 @@
 import { Stack } from "@/types/stack"
 
 // Social media links
-export const SOCIAL_LINKS = {
+export const socialLink = {
     github: "https://github.com/wgutto",
     linkedin: "https://www.linkedin.com/in/wgutto/",
     instagram: "https://www.instagram.com/wgutto",

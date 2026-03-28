@@ -5,7 +5,7 @@ import Link from "next/link"
 import { FormContact } from "./form-contact"
 import { RevealLeft } from "../ui/reveal-left"
 import { RevealRight } from "../ui/reveal-right"
-import { SOCIAL_LINKS } from "@/data/constants"
+import { socialLink } from "@/data/constants"
 
 export const Contact = () => {
     return (
@@ -15,7 +15,7 @@ export const Contact = () => {
         >
             <h1 className="text-2xl md:text-3xl font-bold">Contato</h1>
 
-            <div className="w-full max-w-6xl mx-auto flex flex-col justify-center items-center gap-6 mt-6 md:flex-row">
+            <div className="w-full max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto flex flex-col justify-center items-center gap-6 mt-6 md:flex-row">
                 <div className="w-full">
                     <RevealLeft>
                         <div className="flex flex-col gap-4">
@@ -23,10 +23,10 @@ export const Contact = () => {
                                 icon={<MdOutlineEmail className="size-6" />}
                                 title="Email"
                                 message="Envie-me uma mensagem diretamente"
-                                info={SOCIAL_LINKS.email}
+                                info={socialLink.email}
                             />
                             <Link
-                                href={SOCIAL_LINKS.whatsapp}
+                                href={socialLink.whatsapp}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -37,7 +37,7 @@ export const Contact = () => {
                                 />
                             </Link>
                             <Link
-                                href={SOCIAL_LINKS.instagram}
+                                href={socialLink.instagram}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -48,7 +48,7 @@ export const Contact = () => {
                                 />
                             </Link>
                             <Link
-                                href={SOCIAL_LINKS.linkedin}
+                                href={socialLink.linkedin}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >

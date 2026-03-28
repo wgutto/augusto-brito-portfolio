@@ -1,9 +1,10 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ElementType } from "react"
-import { FaExternalLinkAlt } from "react-icons/fa"
-import { SOCIAL_LINKS } from "@/data/constants"
 import { ExternalLink } from "lucide-react"
+import { socialLink } from "@/data/constants"
+import { SocialButton } from "./social-button"
+import { GithubIconSVG } from "../icons/github-icon"
 
 type IconType = {
     icon: ElementType
@@ -65,21 +66,7 @@ export const ProjectItem = ({
                         </div>
                     </Link>
 
-                    <Link
-                        href={SOCIAL_LINKS.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="GitHub"
-                    >
-                        <Image
-                            src={
-                                "https://img.shields.io/badge/GitHub-%23181717.svg?logo=github&logoColor=white"
-                            }
-                            alt="Logo GitHub"
-                            width={75}
-                            height={75}
-                        />
-                    </Link>
+                    <SocialButton link={socialLink.github} logo={<GithubIconSVG className="size-3 text-muted-foreground" />} nameLink="Github" />
                 </div>
             </div>
         </div>

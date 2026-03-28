@@ -31,7 +31,7 @@ export const Projects = () => {
         >
             <h1 className="text-2xl md:text-3xl font-bold">Projetos</h1>
 
-            <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <div className="w-full max-w-2xl lg:max-w-4xl xl:max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
                 {PROJECTS.map((project, index) => {
                     const isLeft = index % 2 === 0
                     const Wrapper = isLeft ? RevealLeft : RevealRight

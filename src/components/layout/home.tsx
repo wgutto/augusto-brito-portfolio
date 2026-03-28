@@ -2,9 +2,15 @@
 
 import Image from "next/image"
 import TextType from "../ui/text-type"
-import Link from "next/link"
 import RevealZoom from "../ui/reveal-zoom"
-import { SOCIAL_LINKS } from "@/data/constants"
+import { SocialButton } from "./social-button"
+import { XIconSVG } from "../icons/x-icon"
+import { socialLink } from "@/data/constants"
+import { LinkedinIconSVG } from "../icons/linkedin-icon"
+import { GithubIconSVG } from "../icons/github-icon"
+import { InstagramIconSVG } from "../icons/instagram-icon"
+import Link from "next/link"
+import { ExternalLink } from "lucide-react"
 
 export const Home = () => {
     return (
@@ -13,10 +19,10 @@ export const Home = () => {
             className="relative min-h-screen flex items-center justify-center snap-start px-4 overflow-hidden dark:bg-linear-to-t dark:from-black dark:to-[#020617]"
         >
             <RevealZoom>
-                <div className="flex flex-col justify-center gap-4 md:flex-row md:items-center w-full max-w-6xl mx-auto">
+                <div className="flex flex-col justify-center gap-4 md:flex-row md:items-center w-full max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto mt-15 md:mt-0">
                     <div className="flex flex-col items-center gap-2 order-2 md:order-1">
                         <div className="flex flex-col text-center md:text-start">
-                            <h1 className="font-semibold text-md md:text-xl xl:text-2xl border-muted-foreground">
+                            <h1 className="font-semibold text-md md:text-lg border-muted-foreground">
                                 Olá, eu sou
                                 <TextType
                                     text={[
@@ -27,93 +33,51 @@ export const Home = () => {
                                     typingSpeed={150}
                                     pauseDuration={3000}
                                     cursorCharacter="|"
-                                    className="text-lg md:text-2xl xl:text-3xl font-bold text-blue-600"
+                                    className="text-xl font-bold text-blue-600"
                                 />
                             </h1>
-                            <div className="text-2xl text-center md:text-start md:text-4xl xl:text-5xl font-bold leading-tight">
+                            <div className="text-2xl text-center md:text-start md:text-4xl xl:text-5xl font-semibold leading-tight">
                                 Focado na criação de sistemas performáticos, escaláveis e bem
                                 arquitetados.
                             </div>
                         </div>
                         <div className="flex flex-col gap-4">
-                            <p className="font-semibold text-lg md:text-xl text-justify text-muted-foreground leading-relaxed">
+                            <p className="text-lg md:text-xl text-left text-muted-foreground leading-relaxed">
                                 Atuo do front ao back-end utilizando TypeScript, React, Next.js e
                                 Node.js, desenvolvendo soluções escaláveis com foco em arquitetura,
                                 performance e experiência do usuário. Tenho experiência com bancos
                                 SQL e NoSQL e deploy em ambientes modernos de cloud.
                             </p>
-                            <div className="flex justify-end border-t-2 gap-2 pt-4">
-                                <Link
-                                    href={SOCIAL_LINKS.github}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label="GitHub"
-                                >
-                                    <Image
-                                        src={
-                                            "https://img.shields.io/badge/GitHub-%23181717.svg?logo=github&logoColor=white"
-                                        }
-                                        alt="Logo GitHub"
-                                        width={68}
-                                        height={68}
-                                    />
+
+                            <div className="flex flex-col border-t-2 gap-6 pt-4">
+                                <Link href={"https://github.com/wgutto?tab=repositories"} target="_blank" className="flex">
+                                    <div className="text-sm flex items-center gap-2 px-2 py-2 rounded-md text-white cursor-pointer bg-blue-600 hover:bg-blue-700">
+                                        <span>Ver projetos</span>
+                                        <ExternalLink className="size-4" />
+                                    </div>
                                 </Link>
-                                <Link
-                                    href={SOCIAL_LINKS.linkedin}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label="LinkedIn"
-                                >
-                                    <Image
-                                        src={
-                                            "https://img.shields.io/badge/LinkedIn-%230A66C2.svg?logo=linkedin&logoColor=white"
-                                        }
-                                        alt="Logo LinkedIn"
-                                        width={60}
-                                        height={60}
-                                    />
-                                </Link>
-                                <Link
-                                    href={SOCIAL_LINKS.instagram}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label="Instagram"
-                                >
-                                    <Image
-                                        src={
-                                            "https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white"
-                                        }
-                                        alt="Logo Instagram"
-                                        width={90}
-                                        height={90}
-                                    />
-                                </Link>
-                                <Link
-                                    href={SOCIAL_LINKS.twitter}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label="Twitter/X"
-                                >
-                                    <Image
-                                        src={
-                                            "https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white"
-                                        }
-                                        alt="Logo X"
-                                        width={38}
-                                        height={38}
-                                    />
-                                </Link>
+                                <div className="flex gap-2">
+                                    <SocialButton link={socialLink.linkedin} logo={<LinkedinIconSVG className="size-3 text-muted-foreground" />} nameLink="LinkedIn" />
+                                    <SocialButton link={socialLink.github} logo={<GithubIconSVG className="size-3 text-muted-foreground" />} nameLink="Github" />
+                                    <SocialButton link={socialLink.twitter} logo={<XIconSVG className="size-3 text-muted-foreground" />} nameLink="X" />
+                                    <SocialButton link={socialLink.instagram} logo={<InstagramIconSVG className="size-3 text-muted-foreground" />} nameLink="Instagram" />
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div className="w-full flex items-center justify-center md:justify-end order-1 md:order-2">
-                        <div className="relative w-40 md:w-60 lg:w-70 xl:w-80 aspect-square rounded-full overflow-hidden shadow-md shadow-blue-600">
+                    <div className="flex flex-col items-center justify-center gap-6 md:justify-end order-1 md:order-2">
+                        <div className="relative w-40 md:w-60 lg:w-70 xl:w-80 aspect-square rounded-full overflow-hidden border-2">
                             <Image
                                 src={"/photos/foto-home-2.jpeg"}
                                 alt="Foto Augusto Brito"
                                 fill
                                 className="object-cover transition-all duration-1000 hover:scale-105"
                             />
+                        </div>
+
+                        <div className="flex gap-2 items-center bg-neutral-200 dark:bg-neutral-900 px-2 py-1 rounded-md">
+                            <div className="w-1.5 h-1.5 bg-green-600 rounded-full animate-pulse"></div>
+                            <p className="text-[12px] text-muted-foreground font-semibold">Disponível para oportunidades</p>
                         </div>
                     </div>
                 </div>

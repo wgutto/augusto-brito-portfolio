@@ -4,22 +4,8 @@ import { GlareCard } from "../ui/glare-card"
 import Image from "next/image"
 import { RevealLeft } from "../ui/reveal-left"
 import { RevealRight } from "../ui/reveal-right"
-import { ReactIconSVG } from "../icons/react-icon"
-import { TailwindIconSVG } from "../icons/tailwind-icon"
-import { NextJsIconSVG } from "../icons/nextjs-icon"
-import { ViteJsIconSVG } from "../icons/vitejs-icon"
-import { HTMLIconSVG } from "../icons/html-icon"
-import { CSSIconSVG } from "../icons/css-icon"
-import { TypeScriptIconSVG } from "../icons/typescript-icon"
-import { NodeJsIconSVG } from "../icons/nodejs-icon"
-import { ExpressIconSVG } from "../icons/express-icon"
-import { PrimaIconSVG } from "../icons/prisma"
-import { MySqlIconSVG } from "../icons/mysql-icon"
-import { MongoDbIconSVG } from "../icons/mongodb-icon"
-import { PostGreSqlSVG } from "../icons/postgresql"
 import { stacks } from "@/data/constants"
 import { StackRow } from "../about/stack-row"
-import { Button } from "../ui/button"
 import { ExternalLink } from "lucide-react"
 import Link from "next/link"
 
@@ -31,7 +17,7 @@ export const About = () => {
         >
             <h1 className="text-2xl md:text-3xl font-bold">Sobre</h1>
 
-            <div className="w-full max-w-6xl flex flex-col justify-center mt-6 lg:items-center lg:gap-6 lg:flex-row">
+            <div className="w-full max-w-2xl lg:max-w-4xl xl:max-w-6xl flex flex-col justify-center mt-6 lg:items-center lg:gap-6 lg:flex-row">
                 <RevealLeft>
                     <div className="hidden lg:flex shadow-2xl rounded-[48px]">
                         <GlareCard className="relative w-88 h-70 md:w-100 md:h-150">
@@ -59,19 +45,17 @@ export const About = () => {
 
                             <div className="flex gap-4 flex-wrap">
                                 {stacks.map((item, index) =>
-                                    <StackRow key={index} stackName={item.stackName} color={item.color}/>
+                                    <StackRow key={index} stackName={item.stackName} color={item.color} />
                                 )}
                             </div>
                         </div>
 
-                        <div>
-                            <Link href={"https://github.com/wgutto?tab=repositories"} target="_blank" className="flex">
-                                <div className="text-sm flex items-center gap-2 px-2 py-2 rounded-md text-white cursor-pointer bg-blue-600 hover:bg-blue-700">
-                                    <span>Ver projetos</span>
-                                    <ExternalLink className="size-4"/>
-                                </div>
-                            </Link>
-                        </div>
+                        <Link href={"https://github.com/wgutto?tab=repositories"} target="_blank" className="flex">
+                            <div className="text-sm flex items-center gap-2 px-2 py-2 rounded-md text-white cursor-pointer bg-blue-600 hover:bg-blue-700">
+                                <span>Ver projetos</span>
+                                <ExternalLink className="size-4" />
+                            </div>
+                        </Link>
                     </div>
                 </RevealRight>
             </div>
