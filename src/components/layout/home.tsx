@@ -36,13 +36,13 @@ export const Home = () => {
                                     className="text-xl font-bold text-blue-600"
                                 />
                             </h1>
-                            <div className="text-2xl text-center md:text-start md:text-4xl xl:text-5xl font-semibold leading-tight">
+                            <div className="text-2xl text-center md:text-start md:text-3xl xl:text-4xl font-semibold leading-tight">
                                 Focado na criação de sistemas performáticos, escaláveis e bem
                                 arquitetados.
                             </div>
                         </div>
                         <div className="flex flex-col gap-4">
-                            <p className="text-lg md:text-xl text-center md:text-left text-muted-foreground leading-relaxed">
+                            <p className="text-lg text-center md:text-left text-muted-foreground leading-relaxed">
                                 Atuo do front ao back-end utilizando TypeScript, React, Next.js e
                                 Node.js, desenvolvendo soluções escaláveis com foco em arquitetura,
                                 performance e experiência do usuário. Tenho experiência com bancos

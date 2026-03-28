@@ -35,9 +35,9 @@ export const About = () => {
                         <div className="flex flex-col gap-4">
                             <h1 className="text-2xl font-bold">Augusto Brito</h1>
 
-                            <p className="text-muted-foreground text-xl text-left">Desenvolvedor <span className="text-black font-semibold dark:text-white">Full-Stack</span> apaixonado por construir aplicações web que aliam boa performance a uma experiência de usuário cuidadosa. Tenho 23 anos, estudo Engenharia de Software e sou do Ceará, Brasil.</p>
+                            <p className="text-muted-foreground text-lg text-left">Desenvolvedor <span className="text-black font-semibold dark:text-white">Full-Stack</span> apaixonado por construir aplicações web que aliam boa performance a uma experiência de usuário cuidadosa. Tenho 23 anos, estudo Engenharia de Software e sou do Ceará, Brasil.</p>
 
-                            <p className="text-muted-foreground text-xl text-left">Gosto de código bem organizado, de entender o porquê das coisas e de projetos que exijam pensar além do óbvio. Estou sempre aprendendo, atualmente aprofundando em arquitetura de software e boas práticas que fazem a diferença no longo prazo.</p>
+                            <p className="text-muted-foreground text-lg text-left">Gosto de código bem organizado, de entender o porquê das coisas e de projetos que exijam pensar além do óbvio. Estou sempre aprendendo, atualmente aprofundando em arquitetura de software e boas práticas que fazem a diferença no longo prazo.</p>
                         </div>
 
                         <div className="flex flex-col border-y-2 py-4 gap-2">
