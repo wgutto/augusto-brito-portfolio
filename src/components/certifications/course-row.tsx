@@ -15,7 +15,7 @@ export const CourseRow = ({ course, onCertificateClick }: CourseRowProps) => {
             <div className="flex flex-col min-w-0">
                 <Tooltip>
                     <TooltipTrigger>
-                        <p className="truncate text-left text-sm font-semibold">{course.name}</p>
+                        <p className="line-clamp-2 text-left text-sm font-semibold">{course.name}</p>
                     </TooltipTrigger>
                     <TooltipContent>{course.name}</TooltipContent>
                 </Tooltip>

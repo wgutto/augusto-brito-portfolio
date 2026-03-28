@@ -5,9 +5,9 @@ import Image from "next/image"
 import { RevealLeft } from "../ui/reveal-left"
 import { RevealRight } from "../ui/reveal-right"
 import { stacks } from "@/data/constants"
-import { StackRow } from "../about/stack-row"
 import { ExternalLink } from "lucide-react"
 import Link from "next/link"
+import { StackIcon } from "./stack-icon"
 
 export const About = () => {
     return (
@@ -45,7 +45,7 @@ export const About = () => {
 
                             <div className="flex gap-4 flex-wrap">
                                 {stacks.map((item, index) =>
-                                    <StackRow key={index} stackName={item.stackName} color={item.color} />
+                                    <StackIcon key={index} stackName={item.stackName} color={item.color} />
                                 )}
                             </div>
                         </div>

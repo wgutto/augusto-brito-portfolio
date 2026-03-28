@@ -30,16 +30,16 @@ export const PROJECTS = [
             "Sistema web de gerenciamento de pedidos para pizzaria com autenticação de usuários, permitindo acompanhar pedidos em tempo real e organizar o fluxo de produção da cozinha.",
         link: "https://github.com/wgutto/brito-pizzaria",
         linkText: "Em desenvolvimento",
-        technologies: [
-            "TypeScript",
-            "NextJs",
-            "React",
-            "TailwindCSS",
-            "NodeJs",
-            "Express",
-            "Prisma",
-            "PostgreSQL",
-        ],
+        stacks: [
+            { stack: "TypeScript", color: "#378ADD" },
+            { stack: "Next.js", color: "#378ADD" },
+            { stack: "React", color: "#378ADD" },
+            { stack: "TailwindCSS", color: "#378ADD" },
+            { stack: "Node.js", color: "#1D9E75" },
+            { stack: "Express", color: "#1D9E75" },
+            { stack: "Primsa", color: "#BA7517" },
+            { stack: "PostgreSQL", color: "#BA7517" }
+        ]
     },
     {
         id: "netus-pizzaria",
@@ -49,7 +49,12 @@ export const PROJECTS = [
             "Plataforma de pedidos online para pizzaria com carrinho, escolha de tamanhos e integração direta com WhatsApp para envio automático do pedido ao lojista.",
         link: "https://project-netus-pizzaria.vercel.app/",
         linkText: "Projeto online",
-        technologies: ["TypeScript", "NextJs", "React", "TailwindCSS"],
+        stacks: [
+            { stack: "TypeScript", color: "#378ADD" },
+            { stack: "Next.js", color: "#378ADD" },
+            { stack: "React", color: "#378ADD" },
+            { stack: "TailwindCSS", color: "#378ADD" }
+        ]
     },
     {
         id: "calculadora-imc",
@@ -59,9 +64,14 @@ export const PROJECTS = [
             "Aplicação web responsiva para cálculo do Índice de Massa Corporal (IMC), com validação de formulários em tempo real, interface intuitiva e suporte a tema claro e escuro.",
         link: "https://projeto-calculadora-de-imc-pearl.vercel.app/",
         linkText: "Projeto online",
-        technologies: ["TypeScript", "NextJs", "React", "TailwindCSS"],
+        stacks: [
+            { stack: "TypeScript", color: "#378ADD" },
+            { stack: "Next.js", color: "#378ADD" },
+            { stack: "React", color: "#378ADD" },
+            { stack: "TailwindCSS", color: "#378ADD" }
+        ],
     },
-] as const
+] 
 
 export const stacks: Stack[] = [
     {

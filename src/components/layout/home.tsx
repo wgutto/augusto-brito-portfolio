@@ -42,7 +42,7 @@ export const Home = () => {
                             </div>
                         </div>
                         <div className="flex flex-col gap-4">
-                            <p className="text-lg md:text-xl text-left text-muted-foreground leading-relaxed">
+                            <p className="text-lg md:text-xl text-center md:text-left text-muted-foreground leading-relaxed">
                                 Atuo do front ao back-end utilizando TypeScript, React, Next.js e
                                 Node.js, desenvolvendo soluções escaláveis com foco em arquitetura,
                                 performance e experiência do usuário. Tenho experiência com bancos
@@ -56,7 +56,7 @@ export const Home = () => {
                                         <ExternalLink className="size-4" />
                                     </div>
                                 </Link>
-                                <div className="flex gap-2">
+                                <div className="flex flex-wrap gap-2">
                                     <SocialButton link={socialLink.linkedin} logo={<LinkedinIconSVG className="size-3 text-muted-foreground" />} nameLink="LinkedIn" />
                                     <SocialButton link={socialLink.github} logo={<GithubIconSVG className="size-3 text-muted-foreground" />} nameLink="Github" />
                                     <SocialButton link={socialLink.twitter} logo={<XIconSVG className="size-3 text-muted-foreground" />} nameLink="X" />
