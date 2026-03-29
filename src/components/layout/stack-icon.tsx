@@ -10,7 +10,7 @@ export const StackIcon = ({stackName, color}: Props) => {
                 className={`w-2 h-2 rounded-full`}
                 style={{ background: color }}
             ></div>
-            <h1 className="font-semibold text-sm">{stackName}</h1>
+            <h1 className="font-semibold text-[12px]">{stackName}</h1>
         </div>
     )
 }

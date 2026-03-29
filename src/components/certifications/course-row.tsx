@@ -1,6 +1,6 @@
 "use client"
 
-import { Course } from "@/types/certifications"
+import { Course } from "@/types/course"
 import { Button } from "../ui/button"
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip"
 

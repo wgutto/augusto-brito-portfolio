@@ -9,7 +9,7 @@ export const socialLink = {
     email: "augusstobrito@gmail.com",
     whatsapp:
         "https://wa.me/5588996087187?text=Olá%20Augusto,%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade.",
-} as const
+}
 
 // Navigation items
 export const NAV_ITEMS = [
@@ -18,10 +18,10 @@ export const NAV_ITEMS = [
     { name: "Projetos", link: "#projects" },
     { name: "Certificações", link: "#certifications" },
     { name: "Contato", link: "#contact" },
-] as const
+]
 
 // Projects data
-export const PROJECTS = [
+export const projects = [
     {
         id: "brito-pizzaria",
         title: "Brito Pizzaria",
@@ -29,7 +29,6 @@ export const PROJECTS = [
         description:
             "Sistema web de gerenciamento de pedidos para pizzaria com autenticação de usuários, permitindo acompanhar pedidos em tempo real e organizar o fluxo de produção da cozinha.",
         link: "https://github.com/wgutto/brito-pizzaria",
-        linkText: "Em desenvolvimento",
         stacks: [
             { stack: "TypeScript", color: "#378ADD" },
             { stack: "Next.js", color: "#378ADD" },
@@ -39,7 +38,11 @@ export const PROJECTS = [
             { stack: "Express", color: "#1D9E75" },
             { stack: "Primsa", color: "#BA7517" },
             { stack: "PostgreSQL", color: "#BA7517" }
-        ]
+        ],
+        textStatus: "Em desenvolvimento",
+        colorTextStatus: "#633806",
+        colorBgStatus: "#FAEEDA"
+        
     },
     {
         id: "netus-pizzaria",
@@ -54,7 +57,10 @@ export const PROJECTS = [
             { stack: "Next.js", color: "#378ADD" },
             { stack: "React", color: "#378ADD" },
             { stack: "TailwindCSS", color: "#378ADD" }
-        ]
+        ],
+        textStatus: "Online",
+        colorTextStatus: "#3B6D11",
+        colorBgStatus: "#EAF3DE"
     },
     {
         id: "calculadora-imc",
@@ -70,6 +76,9 @@ export const PROJECTS = [
             { stack: "React", color: "#378ADD" },
             { stack: "TailwindCSS", color: "#378ADD" }
         ],
+        textStatus: "Online",
+        colorTextStatus: "#3B6D11",
+        colorBgStatus: "#EAF3DE"
     },
 ] 
 

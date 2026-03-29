@@ -84,7 +84,7 @@ export const CertificateModal = ({
                                         height={800}
                                         quality={100}
                                         priority
-                                        className="w-full h-full object-cover"
+                                        className="w-full object-cover"
                                     />
                                 </div>
                             </div>

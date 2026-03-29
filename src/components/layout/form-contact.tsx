@@ -7,10 +7,7 @@ import { Button } from "@/components/ui/button"
 import {
     Card,
     CardContent,
-    CardDescription,
     CardFooter,
-    CardHeader,
-    CardTitle,
 } from "@/components/ui/card"
 import { Field, FieldError, FieldGroup, FieldLabel } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
@@ -28,7 +25,6 @@ export const FormContact = () => {
         defaultValues: {
             name: "",
             email: "",
-            subject: "",
             message: "",
         },
     })
@@ -40,74 +36,50 @@ export const FormContact = () => {
 
     return (
         <Card className="w-full shadow-md">
-            <CardHeader>
-                <CardTitle>Envie uma mensagem</CardTitle>
-                <CardDescription>Me envie uma mensagem para conversarmos melhor.</CardDescription>
-            </CardHeader>
             <CardContent>
                 <form id="form-contact" onSubmit={form.handleSubmit(onSubmit)}>
                     <FieldGroup>
-                        <Controller
-                            name="name"
-                            control={form.control}
-                            render={({ field, fieldState }) => (
-                                <Field data-invalid={fieldState.invalid}>
-                                    <FieldLabel htmlFor="contact-name">Nome</FieldLabel>
-                                    <Input
-                                        {...field}
-                                        id="contact-name"
-                                        aria-invalid={fieldState.invalid}
-                                        placeholder="Digite seu nome"
-                                        autoComplete="off"
-                                    />
-                                    {fieldState.invalid && (
-                                        <FieldError errors={[fieldState.error]} />
-                                    )}
-                                </Field>
-                            )}
-                        />
-
-                        <Controller
-                            name="email"
-                            control={form.control}
-                            render={({ field, fieldState }) => (
-                                <Field data-invalid={fieldState.invalid}>
-                                    <FieldLabel htmlFor="contact-email">Email</FieldLabel>
-                                    <Input
-                                        {...field}
-                                        id="contact-email"
-                                        type="email"
-                                        aria-invalid={fieldState.invalid}
-                                        placeholder="seu.email@example.com"
-                                        autoComplete="off"
-                                    />
-                                    {fieldState.invalid && (
-                                        <FieldError errors={[fieldState.error]} />
-                                    )}
-                                </Field>
-                            )}
-                        />
-
-                        <Controller
-                            name="subject"
-                            control={form.control}
-                            render={({ field, fieldState }) => (
-                                <Field data-invalid={fieldState.invalid}>
-                                    <FieldLabel htmlFor="contact-subject">Assunto</FieldLabel>
-                                    <Input
-                                        {...field}
-                                        id="contact-subject"
-                                        aria-invalid={fieldState.invalid}
-                                        placeholder="Qual é o assunto?"
-                                        autoComplete="off"
-                                    />
-                                    {fieldState.invalid && (
-                                        <FieldError errors={[fieldState.error]} />
-                                    )}
-                                </Field>
-                            )}
-                        />
-
+                        <div className="flex gap-4">
+                            <Controller
+                                name="name"
+                                control={form.control}
+                                render={({ field, fieldState }) => (
+                                    <Field data-invalid={fieldState.invalid}>
+                                        <FieldLabel htmlFor="contact-name">Nome</FieldLabel>
+                                        <Input
+                                            {...field}
+                                            id="contact-name"
+                                            aria-invalid={fieldState.invalid}
+                                            placeholder="Seu nome"
+                                            autoComplete="off"
+                                        />
+                                        {fieldState.invalid && (
+                                            <FieldError errors={[fieldState.error]} />
+                                        )}
+                                    </Field>
+                                )}
+                            />
+                            <Controller
+                                name="email"
+                                control={form.control}
+                                render={({ field, fieldState }) => (
+                                    <Field data-invalid={fieldState.invalid}>
+                                        <FieldLabel htmlFor="contact-email">Email</FieldLabel>
+                                        <Input
+                                            {...field}
+                                            id="contact-email"
+                                            type="email"
+                                            aria-invalid={fieldState.invalid}
+                                            placeholder="seu.email@example.com"
+                                            autoComplete="off"
+                                        />
+                                        {fieldState.invalid && (
+                                            <FieldError errors={[fieldState.error]} />
+                                        )}
+                                    </Field>
+                                )}
+                            />
+                        </div>
                         <Controller
                             name="message"
                             control={form.control}
@@ -118,7 +90,7 @@ export const FormContact = () => {
                                         <InputGroupTextarea
                                             {...field}
                                             id="contact-message"
-                                            placeholder="Digite uma mensagem"
+                                            placeholder="Conte um pouco sobre o que você tem em mente..."
                                             rows={6}
                                             className="min-h-24"
                                             aria-invalid={fieldState.invalid}
@@ -139,7 +111,9 @@ export const FormContact = () => {
                     </FieldGroup>
                 </form>
             </CardContent>
-            <CardFooter className="w-full flex justify-end">
+            <CardFooter className="w-full flex justify-between">
+                <p className="text-sm text-muted-foreground">Respondo em até 24h</p>
+
                 <Button
                     type="submit"
                     form="form-contact"

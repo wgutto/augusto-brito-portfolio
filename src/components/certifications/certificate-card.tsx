@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { CertificateModal } from "./certificate-modal"
-import { Course } from "@/types/certifications"
+import { Course } from "@/types/course"
 import { CourseRow } from "./course-row"
 
 interface CertificateCardProps {

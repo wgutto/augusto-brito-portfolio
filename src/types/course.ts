@@ -6,11 +6,3 @@ export type Course = {
     skillArea: "BACKEND" | "FRONTEND" | "INFRAANDDEVOPS" | "QUALITYANDTOOLS" | "BOTH"
     certificateImage: string
 }
-
-export interface CertificationPlatform {
-    id: string
-    name: string
-    accentColor: string
-    logoSrc: string
-    courses: Course[]
-}
